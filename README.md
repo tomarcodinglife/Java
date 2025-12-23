@@ -34,3 +34,30 @@ JDK is a complete kit for Java developers. (JDK = JRE, Javac or Java Compiler, D
 ## Variables 
 
 ## Data Type
+
+### Premitive Data Type
+
+| Data Type | Description                                  | Size (Fixed) | Example                          | Type              | 
+|----------|-----------------------------------------------|--------------|----------------------------------|------------------ |
+| byte     | Very small integer                            | 1 byte       | byte a = 10;                     | Integer (Integral)|
+| short    | Small integer                                 | 2 bytes      | short b = 100;                   | Integer (Integral)|
+| int      | Integer value (whole numbers)                 | 4 bytes      | int c = 1000;                    | Integer (Integral)|
+| long     | Large integer                                 | 8 bytes      | long d = 100000L;                | Integer (Integral)|
+| float    | Single-precision decimal number               | 4 bytes      | float e = 3.14f;                 | Floating-Point    |
+| double   | Double-precision decimal number               | 8 bytes      | double f = 3.14159;              | Floating-Point    |
+| char     | Single Unicode character                      | 2 bytes      | char g = 'A';                    | Character Type    |
+| boolean  | True or false                                 | 1 byte*      | boolean h = true;                | Boolean           |
+---
+
+## Non Premitive Data Type
+
+| Data Type | Description                                   | Size    | Example                                  | Type                |
+|----------|------------------------------------------------|---------|------------------------------------------|---------------------|
+| String   | Sequence of characters (String class)          | Depends | String a = "Hello";                      | Text / Reference    |
+| Array    | Collection of elements of same data type       | Depends | int[] b = {1, 2, 3};                     | Collection          |
+| Class    | Blueprint for creating objects                 | Depends | class Student { }                        | User-Defined Type   |
+| Object   | Parent class of all Java classes               | Depends | Object obj = new Object();               | Universal Reference |
+| Interface| Blueprint with abstract methods                | Depends | interface Shape { }                      | Abstract Type       |
+| Enum     | Set of named constants                         | Depends | enum Day { MON, TUE };                   | Special Class       |
+---
+
