@@ -49,6 +49,16 @@ JDK is a complete kit for Java developers. (JDK = JRE, Javac or Java Compiler, D
 | boolean  | True or false                                 | 1 byte*      | boolean h = true;                | Boolean           |
 ---
 
+### Example 
+    int age = 20;
+    boolean isRealAge = true;
+    float myMarks = 70.0f;
+    double myHeight = 5.7;
+    String name = "Sujit Kumar Singh";
+    byte level = 3; (Use when Memory very need)
+    short year = 2025; (Use when memory need small but larger than byte)
+    long population = 140000000L; (Use only when required large value store in memory)
+
 ## Non Premitive Data Type
 
 | Data Type | Description                                   | Size    | Example                                  | Type                |
@@ -60,4 +70,6 @@ JDK is a complete kit for Java developers. (JDK = JRE, Javac or Java Compiler, D
 | Interface| Blueprint with abstract methods                | Depends | interface Shape { }                      | Abstract Type       |
 | Enum     | Set of named constants                         | Depends | enum Day { MON, TUE };                   | Special Class       |
 ---
+
+
 
