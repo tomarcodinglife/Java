@@ -33,6 +33,89 @@ JDK is a complete kit for Java developers. (JDK = JRE, Javac or Java Compiler, D
 
 ## Variables 
 
+## Java Literals
+Literals are **fixed values assigned directly** to variables in Java. They represent **constant data**.
+
+### 1. Integer Literals
+Whole numbers without decimal point.
+
+| Type          | Syntax / Example     | Notes                                |
+|---------------|-------------------|-------------------------------------|
+| Decimal       | `int a = 10;`     | Normal integer                      |
+| Octal         | `int b = 012;`    | Starts with `0`, decimal 10         |
+| Hexadecimal   | `int c = 0xA;`    | Starts with `0x`, decimal 10        |
+| Binary        | `int d = 0b1010;` | Starts with `0b`, decimal 10        |
+| Long          | `long l = 100000L;` | Use `L` or `l`                     |
+| Readable     | `int p = 1_000_000;` | `_` allowed for readability         |
+
+---
+
+### 2. Floating-Point Literals
+Numbers with decimal point.
+
+| Type     | Syntax / Example     | Notes                          |
+|----------|-------------------|--------------------------------|
+| Float    | `float f = 10.5f;` | Use `f` or `F`                |
+| Double   | `double d = 20.75;` | Default type for decimals     |
+| Scientific | `double e = 1.2e3;` | 1200 in decimal               |
+
+---
+
+### 3. Character Literals
+Single character enclosed in **single quotes**.
+
+| Example       | Notes                            |
+|---------------|---------------------------------|
+| `'A'`         | Single English letter           |
+| `'9'`         | Digit as character              |
+| `'#'`         | Symbol                          |
+| `'\u0041'`    | Unicode character (A)           |
+| `'\n'`        | Escape sequence (new line)      |
+| `'\t'`        | Escape sequence (tab)           |
+| `'\''`        | Single quote character          |
+
+---
+
+### 4. String Literals
+Sequence of characters enclosed in **double quotes**.
+
+| Example                  | Notes                        |
+|---------------------------|-------------------------------|
+| `"Hello"`                 | Text                          |
+| `"Sujit Kumar Singh"`     | Multiple words                |
+| `"Line1\nLine2"`          | Escape sequences supported    |
+
+---
+
+### 5. Boolean Literals
+Represents **true or false** values.
+
+| Example        | Notes                  |
+|----------------|-----------------------|
+| `true`         | Boolean true value     |
+| `false`        | Boolean false value    |
+
+---
+
+### 6. Null Literal
+Represents **no object reference**.
+
+| Example          | Notes                        |
+|-----------------|-------------------------------|
+| `String str = null;` | Only for reference types, not primitive |
+
+---
+
+### Notes
+1. **Integer types**: `byte`, `short`, `int`, `long`  
+2. **Floating types**: `float`, `double`  
+3. **Characters**: Single quotes `' '`  
+4. **Strings**: Double quotes `" "`  
+5. **Boolean**: `true` or `false`  
+6. **Null**: For reference variables only  
+7. Java supports **underscore `_` in numeric literals** for readability  
+
+
 ## Data Type
 
 ### Premitive Data Type
@@ -55,9 +138,10 @@ JDK is a complete kit for Java developers. (JDK = JRE, Javac or Java Compiler, D
     float myMarks = 70.0f;
     double myHeight = 5.7;
     String name = "Sujit Kumar Singh";
-    byte level = 3; (Use when Memory very need)
-    short year = 2025; (Use when memory need small but larger than byte)
-    long population = 140000000L; (Use only when required large value store in memory)
+    byte level = 3; (Use when Memory very limited)
+    short year = 2025; (Use when memory need are small but larger than byte)
+    long population = 140000000L; (Use only when large value needs to be store)
+    char myChar = 'S'; (It is use in single single quotes with single character)
 
 ## Non Premitive Data Type
 
@@ -71,5 +155,64 @@ JDK is a complete kit for Java developers. (JDK = JRE, Javac or Java Compiler, D
 | Enum     | Set of named constants                         | Depends | enum Day { MON, TUE };                   | Special Class       |
 ---
 
+## Java Literals – Table Reference
+
+Literals are **fixed values** assigned directly to variables in Java. They represent constant data.
+
+| Literal Type      | Example Syntax                        | Notes / Output                        |
+|------------------|--------------------------------------|---------------------------------------|
+| **Integer (Decimal)**   | `int a = 10;`                       | Normal integer                        |
+| **Integer (Octal)**     | `int b = 012;`                      | Starts with `0`, decimal 10           |
+| **Integer (Hexadecimal)** | `int c = 0xA;`                     | Starts with `0x`, decimal 10          |
+| **Integer (Binary)**    | `int d = 0b1010;`                   | Starts with `0b`, decimal 10          |
+| **Long**                | `long l = 10000000000L;`            | Use `L` or `l` for long values       |
+| **Readable Integer**    | `int r = 1_000_000;`               | `_` can be used for readability      |
+| **Float**               | `float f = 10.5f;`                  | Use `f` or `F`                        |
+| **Double**              | `double d1 = 20.75;`                | Default type for decimals             |
+| **Scientific (Double)** | `double d2 = 1.2e3;`                | 1.2 × 10³ = 1200                      |
+| **Char**                | `char ch = 'A';`                    | Single character, uses single quotes |
+| **Unicode Char**        | `char ch = '\u0041';`               | Unicode character                     |
+| **String**              | `String name = "Sujit";`            | Sequence of characters                |
+| **Boolean**             | `boolean isJavaFun = true;`         | Only `true` or `false`                |
+| **Null**                | `String str = null;`                 | Represents no reference               |
+| **Escape in String**    | `String msg = "Hello\nJava";`       | Supports escape sequences like \n, \t |
+
+---
+
+### 🔹 Quick Tips
+1. **Integer types**: `byte`, `short`, `int`, `long`  
+2. **Floating types**: `float`, `double`  
+3. **Char vs String**: `'A'` → char, `"A"` → String  
+4. Boolean literals are only `true` or `false`.  
+5. Null literal can be assigned **only to reference types**.  
+
+---
+
+
+## Java Escape Sequences – Table Reference
+
+Escape sequences in Java are special characters preceded by a backslash `\`, used in **strings and char literals**.
+
+| Escape Sequence | Meaning / Usage                        | Example Code                          | Output Example           |
+|-----------------|----------------------------------------|---------------------------------------|-------------------------|
+| `\n`            | New line                               | `System.out.println("Hello\nJava");` | `Hello`<br>`Java`       |
+| `\t`            | Horizontal tab                         | `System.out.println("A\tB\tC");`     | `A   B   C`             |
+| `\\`            | Backslash                               | `System.out.println("C:\\Users");`   | `C:\Users`              |
+| `\'`            | Single quote                            | `char ch = '\'';`                     | `'`                      |
+| `\"`            | Double quote                            | `System.out.println("He said \"Hi\"");` | `He said "Hi"`         |
+| `\r`            | Carriage return (cursor to line start)  | `System.out.println("12345\rAB");`   | `AB345`                  |
+| `\b`            | Backspace (removes previous char)       | `System.out.println("Helloo\b!");`   | `Hell!`                  |
+| `\f`            | Form feed (page break, mostly printing) | `System.out.println("Hello\fWorld");` | (depends on printer)    |
+| `\uXXXX`        | Unicode character                        | `char ch = '\u0041';`                | `A`                      |
+
+---
+
+### 🔹 Quick Tips
+1. Escape sequences work **only in char or string literals**.  
+2. Always **use double backslash `\\`** for printing a backslash.  
+3. `\b` and `\r` may behave differently in **console vs files**.  
+4. Unicode `\uXXXX` can represent **any Unicode character**.  
+
+---
 
 
