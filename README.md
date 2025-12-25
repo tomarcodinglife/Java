@@ -217,7 +217,7 @@ Escape sequences in Java are special characters preceded by a backslash `\`, use
 
 ## Print Hello World
 
-'''java
+```java
 
 public class HelloWorld {
     public static void main(String[] args) {
@@ -225,6 +225,6 @@ public class HelloWorld {
     }   
 }
 
-'''
+```
 
 
