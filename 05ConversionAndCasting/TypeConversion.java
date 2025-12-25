@@ -9,9 +9,18 @@ public class TypeConversion {
         double doubleNumber = 3.1f;
         long longNumber = 7;
 
-        float floatNum = 50000000; 
-        double doubleNumber = 3.1f;
-        long longNumber = 7;
+        // explicit or Casting
+        float floatNum = (float) 5.0; 
+        double doubleNum = (double)5.0;
+        long longNum = (long) 5.0 ;
+
+        System.out.println(floatNumber);
+        System.out.println(doubleNumber);
+        System.out.println(longNumber);
+        System.out.println(floatNum);
+        System.out.println(doubleNum);
+        System.out.println(longNum);
+
 
         
         

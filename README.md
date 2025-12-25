@@ -227,4 +227,65 @@ public class HelloWorld {
 
 ```
 
+## Common Regex Symbols (Java)
+
+> Note: Java me regex likhte waqt backslash (`\`) ko escape karna padta hai.  
+> Isliye `\d` ko Java string me `"\\d"` likhte hain.
+
+### Character Classes
+
+| Regex | Java String | Description |
+|------|------------|-------------|
+| `\d` | `\\d` | Digit (0–9) |
+| `\D` | `\\D` | Non-digit |
+| `\w` | `\\w` | Word character (a–z, A–Z, 0–9, _) |
+| `\W` | `\\W` | Non-word character |
+| `\s` | `\\s` | Whitespace (space, tab, newline) |
+| `\S` | `\\S` | Non-whitespace |
+
+### Quantifiers
+
+| Regex | Description |
+|------|------------|
+| `*` | 0 or more times |
+| `+` | 1 or more times |
+| `?` | 0 or 1 time |
+| `{n}` | Exactly n times |
+| `{n,}` | At least n times |
+| `{n,m}` | Between n and m times |
+
+### Anchors
+
+| Regex | Description |
+|------|------------|
+| `^` | Start of string |
+| `$` | End of string |
+
+### Character Sets
+
+| Regex | Description |
+|------|------------|
+| `[abc]` | Matches a, b, or c |
+| `[a-z]` | Lowercase letters |
+| `[A-Z]` | Uppercase letters |
+| `[0-9]` | Digits |
+| `[^0-9]` | Not a digit |
+
+### Groups & Alternation
+
+| Regex | Description |
+|------|------------|
+| `(abc)` | Group |
+| `|` | OR operator |
+
+### Common Patterns
+
+| Pattern | Description |
+|-------|-------------|
+| `\\d+` | One or more digits |
+| `\\d{10}` | 10-digit mobile number |
+| `[a-zA-Z]+` | Alphabets only |
+| `\\w+@\\w+\\.\\w+` | Basic email format |
+
+
 
