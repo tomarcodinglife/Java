@@ -215,4 +215,16 @@ Escape sequences in Java are special characters preceded by a backslash `\`, use
 
 ---
 
+## Print Hello World
+
+'''java
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }   
+}
+
+'''
+
 
