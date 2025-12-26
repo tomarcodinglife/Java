@@ -4,23 +4,25 @@ import java.util.Scanner;
 public class Assignment {
     public static void main(String[] args) {
 
+        int accountBalance = 1000;
+
         Scanner input = new Scanner(System.in);
-
-        System.out.print("Enter NumA = ");
-        int NumA = input.nextInt();
+        System.out.println("your Current Balance is " + accountBalance);
         
+        // Assignment Operator (=, +=, -=, *=, /=, %=)
+        // Its also called shorthand operator (+=, -=, *=, /=, %=)
 
-        System.out.print("Enter NumB = ");
-        int NumB = input.nextInt();
+        System.out.print("Enter Deposite = ");
+        int Deposite = input.nextInt();
+        accountBalance += Deposite;
+        System.out.println("accountBalance += Deposite : " + accountBalance);
+        
+        System.out.print("Enter Withdrawal = ");
+        int Withdrawal = input.nextInt();
+        accountBalance -= Withdrawal;
+        System.out.println("accountBalance += Withdrawal : " + accountBalance );
 
-        // Assignment Operator (=)
-        int temp = NumA;
-
-        NumA = NumB;
-        NumB = temp;
-
-        System.out.println(" After swap NumA =  " + NumA);
-        System.out.println(" After swap NumB =  " + NumB);
+        System.out.println("Current Balance : " + accountBalance);
 
     }
 }

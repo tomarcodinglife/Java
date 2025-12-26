@@ -288,4 +288,136 @@ public class HelloWorld {
 | `\\w+@\\w+\\.\\w+` | Basic email format |
 
 
+## All Types of Operators in Java
+
+Java me operators ka use **operations perform karne** ke liye hota hai.
+
+---
+
+### 1. Arithmetic Operators
+
+| Operator | Name | Example |
+|--------|------|--------|
+| `+` | Addition | `a + b` |
+| `-` | Subtraction | `a - b` |
+| `*` | Multiplication | `a * b` |
+| `/` | Division | `a / b` |
+| `%` | Modulus | `a % b` |
+
+---
+
+### 2. Unary Operators
+
+| Operator | Name | Example |
+|--------|------|--------|
+| `+` | Unary Plus | `+a` |
+| `-` | Unary Minus | `-a` |
+| `++` | Increment | `a++`, `++a` |
+| `--` | Decrement | `a--`, `--a` |
+| `!` | Logical NOT | `!true` |
+
+---
+
+### 3. Assignment Operators
+
+| Operator | Example | Meaning |
+|--------|---------|--------|
+| `=` | `a = 5` | Assign |
+| `+=` | `a += 2` | `a = a + 2` |
+| `-=` | `a -= 2` | `a = a - 2` |
+| `*=` | `a *= 2` | `a = a * 2` |
+| `/=` | `a /= 2` | `a = a / 2` |
+| `%=` | `a %= 2` | `a = a % 2` |
+
+---
+
+### 4. Relational (Comparison) Operators
+
+| Operator | Description | Example |
+|--------|-------------|--------|
+| `==` | Equal to | `a == b` |
+| `!=` | Not equal to | `a != b` |
+| `>` | Greater than | `a > b` |
+| `<` | Less than | `a < b` |
+| `>=` | Greater than or equal | `a >= b` |
+| `<=` | Less than or equal | `a <= b` |
+
+---
+
+### 5. Logical Operators
+
+| Operator | Name | Example |
+|--------|------|--------|
+| `&&` | Logical AND | `a > 5 && b < 10` |
+| `||` | Logical OR | `a > 5 || b < 10` |
+| `!` | Logical NOT | `!(a > b)` |
+
+---
+
+### 6. Bitwise Operators
+
+| Operator | Name | Example |
+|--------|------|--------|
+| `&` | AND | `a & b` |
+| `|` | OR | `a | b` |
+| `^` | XOR | `a ^ b` |
+| `~` | Complement | `~a` |
+
+---
+
+### 7. Shift Operators
+
+| Operator | Name | Example |
+|--------|------|--------|
+| `<<` | Left Shift | `a << 1` |
+| `>>` | Right Shift | `a >> 1` |
+| `>>>` | Unsigned Right Shift | `a >>> 1` |
+
+---
+
+### 8. Ternary Operator
+
+| Operator | Description | Example |
+|--------|-------------|--------|
+| `?:` | Conditional | `max = (a > b) ? a : b;` |
+
+---
+
+### 9. instanceof Operator
+
+| Operator | Description | Example |
+|--------|-------------|--------|
+| `instanceof` | Object type check | `obj instanceof String` |
+
+---
+
+### 10. Special Operators
+
+| Operator | Description | Example |
+|--------|-------------|--------|
+| `.` | Access member | `obj.method()` |
+| `[]` | Array access | `arr[0]` |
+| `()` | Method call | `method()` |
+| `new` | Object creation | `new Scanner()` |
+
+---
+
+### Operator Precedence (High → Low)
+
+| Priority | Operators |
+|--------|----------|
+| High | `()`, `[]`, `.` |
+|  | `++`, `--`, `!` |
+|  | `*`, `/`, `%` |
+|  | `+`, `-` |
+|  | `<`, `>`, `<=`, `>=` |
+|  | `==`, `!=` |
+|  | `&&` |
+|  | `||` |
+| Low | `=`, `+=`, `-=` |
+
+---
+
+
+
 
