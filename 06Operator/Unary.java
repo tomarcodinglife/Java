@@ -19,5 +19,8 @@ public class Unary {
         int d = c--;
         System.out.println(" d : " + d);
 
+        int e = d;
+        System.out.print("e : " + e);
+
     }
 }
