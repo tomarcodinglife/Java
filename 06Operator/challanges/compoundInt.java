@@ -6,12 +6,14 @@ public class compoundInt {
         System.out.println("Welcome to Compund Interest Calculator");
         Scanner input = new Scanner(System.in);
         System.out.print("Enter Principal Amount : ");
-        double principalAmount = input.nextDouble();
+        int principalAmount = input.nextInt();
         System.out.print("Enter Rate of Interest : ");
-        double rateOfInterest = input.nextDouble();
+        float rateOfInterest = input.nextFloat();
         System.out.print("Enter Time Duration in Year : ");
-        double timeDuration = input.nextDouble();
-        double CompundInt = principalAmount * (1 + rateOfInterest / 100) * timeDuration; 
+        float timeDuration = input.nextFloat();
+
+        double CompundInt = principalAmount * Math.pow((1 + rateOfInterest / 100), timeDuration); 
+
         System.out.print("Result : " + CompundInt);
 
     }
