@@ -193,17 +193,17 @@ Literals are **fixed values** assigned directly to variables in Java. They repre
 
 Escape sequences in Java are special characters preceded by a backslash `\`, used in **strings and char literals**.
 
-| Escape Sequence | Meaning / Usage                        | Example Code                          | Output Example           |
-|-----------------|----------------------------------------|---------------------------------------|-------------------------|
-| `\n`            | New line                               | `System.out.println("Hello\nJava");` | `Hello`<br>`Java`       |
-| `\t`            | Horizontal tab                         | `System.out.println("A\tB\tC");`     | `A   B   C`             |
-| `\\`            | Backslash                               | `System.out.println("C:\\Users");`   | `C:\Users`              |
-| `\'`            | Single quote                            | `char ch = '\'';`                     | `'`                      |
-| `\"`            | Double quote                            | `System.out.println("He said \"Hi\"");` | `He said "Hi"`         |
-| `\r`            | Carriage return (cursor to line start)  | `System.out.println("12345\rAB");`   | `AB345`                  |
-| `\b`            | Backspace (removes previous char)       | `System.out.println("Helloo\b!");`   | `Hell!`                  |
-| `\f`            | Form feed (page break, mostly printing) | `System.out.println("Hello\fWorld");` | (depends on printer)    |
-| `\uXXXX`        | Unicode character                        | `char ch = '\u0041';`                | `A`                      |
+| Escape Sequence | Meaning / Usage                         | Example Code                            | Output Example           |
+|-----------------|-----------------------------------------|-----------------------------------------|--------------------------|
+| `\n`            | New line                                | `System.out.println("Hello\nJava");`    | `Hello`<br>`Java`        |
+| `\t`            | Horizontal tab                          | `System.out.println("A\tB\tC");`        | `A   B   C`              |
+| `\\`            | Backslash                               | `System.out.println("C:\\Users");`      | `C:\Users`               |
+| `\'`            | Single quote                            | `char ch = '\'';`                       | `'`                      |
+| `\"`            | Double quote                            | `System.out.println("He said \"Hi\"");` | `He said "Hi"`           |
+| `\r`            | Carriage return (cursor to line start)  | `System.out.println("12345\rAB");`      | `AB345`                  |
+| `\b`            | Backspace (removes previous char)       | `System.out.println("Helloo\b!");`      | `Hell!`                  |
+| `\f`            | Form feed (page break, mostly printing) | `System.out.println("Hello\fWorld");`   | (depends on printer)     |
+| `\uXXXX`        | Unicode character                       | `char ch = '\u0041';`                   | `A`                      |
 
 ---
 
