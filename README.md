@@ -348,9 +348,9 @@ Java me operators ka use **operations perform karne** ke liye hota hai.
 
 | Operator | Name | Example |
 |--------|------|--------|
-| `&&` | Logical AND | `a > 5 && b < 10` |
-| `||` | Logical OR | `a > 5 || b < 10` |
-| `!` | Logical NOT | `!(a > b)` |
+| `&&` | Logical AND (&&) | `a > 5 && b < 10` |
+| `||`  | Logical OR (||) | `a > 5 || b < 10` |
+| `!` | Logical NOT (!) | `!(a > b)` |
 
 ---
 
