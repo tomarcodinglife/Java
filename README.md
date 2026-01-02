@@ -418,6 +418,26 @@ Java me operators ka use **operations perform karne** ke liye hota hai.
 
 ---
 
+## Operator Precedence Table (High → Low)
+
+| Operator Type | Category                  | Operators                            | Associativity |               |               |
+| ------------- | ------------------------- | ------------------------------------ | ------------- | ------------- | ------------- |
+| Postfix       | Increment / Decrement     | `a++`, `a--`                         | Left to Right |               |               |
+| Unary         | Prefix, Sign, Logical NOT | `++a`, `--a`, `+a`, `-a`, `!a`, `~a` | Right to Left |               |               |
+| Arithmetic    | Multiplicative            | `*`, `/`, `%`                        | Left to Right |               |               |
+| Arithmetic    | Additive                  | `+`, `-`                             | Left to Right |               |               |
+| Shift         | Bitwise Shift             | `<<`, `>>`, `>>>`                    | Left to Right |               |               |
+| Relational    | Comparison                | `<`, `>`, `<=`, `>=`, `instanceof`   | Left to Right |               |               |
+| Equality      | Equality Check            | `==`, `!=`                           | Left to Right |               |               |
+| Bitwise       | AND                       | `&`                                  | Left to Right |               |               |
+| Bitwise       | XOR                       | `^`                                  | Left to Right |               |               |
+| Bitwise       | OR                        | `                                    | `             | Left to Right |               |
+| Logical       | Logical AND               | `&&`                                 | Left to Right |               |               |
+| Logical       | Logical OR                | `                                    |               | `             | Left to Right |
+| Ternary       | Conditional               | `?:`                                 | Right to Left |               |               |
+| Assignment    | Assignment / Shorthand    | `=`, `+=`, `-=`, `*=`, `/=`, `%=`    | Right to Left |               |               |
+---
+
 
 
 
