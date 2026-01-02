@@ -443,7 +443,7 @@ Java me operators ka use **operations perform karne** ke liye hota hai.
 | Operator | Name                     | Description (What it does)                    | Example Code                    | Binary Operation (Example) | Output |              |              |     |
 | -------- | ------------------------ | --------------------------------------------- | ------------------------------- | -------------------------- | ------ | ------------ | ------------ | --- |
 | `&`      | Bitwise AND              | Dono bits 1 ho tab result 1                   | `int a=5,b=3; a & b;`           | `0101 & 0011 = 0001`       | `1`    |              |              |     |
-| `|`      | Bitwise OR               | Koi ek bit bhi 1 ho to result 1               | `int a=5,b=3; a                 | b;`                        | `0101  | 0011 = 0111` | `7`          |     |
+| (`|`)    | Bitwise OR               | Koi ek bit bhi 1 ho to result 1               | `int a=5,b=3; a                 | b;`                        | `0101  | 0011 = 0111` | `7`          |     |
 | `^`      | Bitwise XOR              | Bits different ho tab result 1                | `int a=5,b=3; a ^ b;`           | `0101 ^ 0011 = 0110`       | `6`    |              |              |     |
 | `~`      | Bitwise NOT (Complement) | Bits ko invert karta hai (1 → 0, 0 → 1)       | `int a=5; ~a;`                  | `~0101 = 1010`             | `-6`   |              |              |     |
 | `<<`     | Left Shift               | Bits ko left shift karta hai (2ⁿ se multiply) | `int a=5; a << 1;`              | `0101 << 1 = 1010`         | `10`   |              |              |     |
