@@ -14,7 +14,6 @@ public class OddEvenWithBitwise {
             System.out.println("Number is Even");
         }
 
-
     }
 
 }
