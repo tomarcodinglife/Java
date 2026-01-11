@@ -2,7 +2,7 @@ package challanges;
 
 import java.util.Scanner;
 
-public class factorials {
+public class DigitsSum {
     
     public static void main(String[] args) {
         
