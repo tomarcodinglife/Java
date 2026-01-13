@@ -28,5 +28,4 @@ public class GreatestCommonDivisor{
         }
         return gcd;
     }
-
 }
