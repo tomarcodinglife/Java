@@ -19,7 +19,11 @@ public class DigitsSum {
 
         while (num > 0) {
             sum += num % 10;
-            num /= 10;
+            System.out.println("num % 10" + "=" + (num % 10));
+            System.out.println(num % 10 + "=" + sum);
+            num = num / 10;
+            System.out.println("um = num / 10" + "=" + (num = num / 10));
+            System.out.println((num = num / 10) + "=" + num);
         }
         return sum;
     }
