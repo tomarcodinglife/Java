@@ -16,11 +16,23 @@ public class ArmstrongNum{
         int DigitCounter = 0
 
         while(Num > 0) {
-            int digit = Num % 10
+            int digit = Num % 10;
             DigitCounter = DigitCounter * 10 + digit;
-            Num = Num / 10
+            Num = Num / 10;
+            count++;
         }
+    }
 
+    public static int NumberIdenditify(int Num) {
+        int count = 0;
+        int DigitCounter = 0
+
+        while(Num > 0) {
+            int digit = Num % 10;
+            DigitCounter = DigitCounter * 10 + digit;
+            Num = Num / 10;
+            count++;
+        }
     }
 
 
