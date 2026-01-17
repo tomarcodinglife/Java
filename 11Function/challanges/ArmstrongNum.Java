@@ -26,7 +26,7 @@ public class ArmstrongNum{
     public static int NumberIdenditify(int Num) {
         int count = 0;
         int DigitCounter = 0
-
+        // 4545
         while(Num > 0) {
             int digit = Num % 10;
             DigitCounter = DigitCounter * 10 + digit;
