@@ -66,7 +66,7 @@ public class patternPrint {
             int star = 0;
 
             while (star <= i) {
-                System.out.print("* ");
+                System.out.print("*");
                 star++;
             }
 
