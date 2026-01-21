@@ -11,7 +11,9 @@ public class patternPrint {
         int userRow = input.nextInt();
 
         rightHalfPyramid(userRow);
+        System.out.println();
         reverseRightHalfPyramid(userRow);
+        System.out.println();
         leftHalfPyramid(userRow);
     }
 
@@ -55,7 +57,7 @@ public class patternPrint {
         while (i < row) {
 
             int space = 0;
-            while (space <= i) {
+            while (space < (row-i-1)) {
                 System.out.print(" ");
                 space++;
             }
@@ -68,10 +70,9 @@ public class patternPrint {
                 star++;
             }
 
+            System.out.println();
 
+            i++;
         }
-
-
     }
-
 }
