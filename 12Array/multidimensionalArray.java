@@ -23,7 +23,7 @@ public class multidimensionalArray{
         System.out.println();
         multidimensionalTraversal(myArray);
 
-        // in Hetrogenious Array collumn and row array not equal
+        /* Remember that in Hetrogenious Array collumn and row array not equal & homogeniou all row and column are equal*/
     }
 
     public static void multidimensionalTraversal(int[][] array){
