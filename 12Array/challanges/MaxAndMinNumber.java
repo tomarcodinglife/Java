@@ -18,7 +18,7 @@ public class MaxAndMinNumber {
 
     public static int min (int[] myArray){
         int min = myArray[0] ;
-        int i = 0;
+        int i = 1;
 
         while (i < myArray.length) {
             if (myArray[i] < min ) {
@@ -35,7 +35,7 @@ public class MaxAndMinNumber {
         int i = 1;
         while (i < myArray.length) {
 
-            if (myArray[i] > max) {
+            if (myArray[i] > max) { 
                 max = myArray[i];
             }
             i++;

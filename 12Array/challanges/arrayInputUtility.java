@@ -18,7 +18,6 @@ class arrayInputUtility{
             nums[i] = input.nextInt();
             i++;
         }
-
         return nums;
     }
 }
