@@ -12,9 +12,12 @@ public class sumAndAverage {
         long total = sum(myInputArray);
         double avg = average(myInputArray);
 
-        System.out.println(total);
-        System.out.println(avg);
-
+        if (myInputArray.length == 0) {
+            System.out.println("Its Invailed Array");
+        }else{
+            System.out.println(total);
+            System.out.println(avg);
+        }
     }
 
     public static long sum (int[] numsArray){
