@@ -7,7 +7,7 @@ class arrayInputUtility{
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter Number the No of ELement : ");
+        System.out.print("Enter Number the No of Element : ");
         int arraySize = input.nextInt();
         
         int[] nums = new int[arraySize];

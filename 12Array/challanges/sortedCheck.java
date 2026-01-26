@@ -14,7 +14,6 @@ public class sortedCheck {
         }else{
             System.out.println("Array Not Sorted");
         }
-
     }
 
     public static boolean IncreasingOrder(int[] myArray){
@@ -38,7 +37,7 @@ public class sortedCheck {
             return true;
         }else{
             int i = 1;
-            while (i < myArray.length) {
+            while (i > myArray.length) {
                 if (myArray[i] > myArray[i-1]) {
                     return false;
                 }
