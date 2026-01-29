@@ -1,4 +1,4 @@
-package challanges;
+
 import java.util.Scanner;
 
 class arrayInputUtility{
