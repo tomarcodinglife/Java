@@ -46,10 +46,12 @@ public class palindrome{
 
     public static boolean palindromeMethod2(int[] Array){
         int i = 0; 
-
-        while () {
-            
+        while (i < Array.length/2) {
+            if (Array[i] != Array[Array.length-1-i]) {
+                return false;
+            }
+            i++;
         }
-        // sujit
+        return true;
     }
 }
