@@ -25,7 +25,7 @@ class Search2DArray{
         Scanner input = new Scanner(System.in);
         System.out.print("Please Enter Number of Rows: ");
         int rows = input.nextInt();
-        System.out.print("Please Enter Number of Column : ");
+        System.out.print("Please Enter Number of Column: ");
         int column = input.nextInt();
 
         int[][] numArray = new int[rows][column];
@@ -34,7 +34,7 @@ class Search2DArray{
         while (i < rows) {
             int j = 0;
             while (j < column) {
-                System.out.print("Please Enter element row: " + (i+1) + ", coumne: " + (j+1) + " : ");
+                System.out.print("Please Enter element row: " + (i+1) + ", column " + (j+1) + " : ");
                 numArray[i][j] = input.nextInt();
                 j++;
             }
