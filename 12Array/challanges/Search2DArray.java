@@ -46,7 +46,6 @@ class Search2DArray{
     public static boolean NumSearch(int[][] Array, int UserNum){
         int i = 0;
         while (i < Array.length) {
-
             int j = 0;
             while (j <Array[i].length) {
                 if (Array[i][j] == UserNum) {
