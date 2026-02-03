@@ -33,7 +33,7 @@ public class sumAndAverage {
 
     public static double average (int[] numsArray){
         long sum = sum(numsArray);
-        double average = (double) (sum / numsArray.length);
+        double average = (double) sum / numsArray.length;
         return average;
     }
     

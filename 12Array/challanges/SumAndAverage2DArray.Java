@@ -1,9 +1,17 @@
 
+import java.util.Scanner;
+
 class SumAndAverage2DArray{
 
     public static void main(String[] args){
         int[][] my2DArray = inputArray2D();
+        
+        long sum = Sum(my2DArray);
+        double average = Average(my2DArray);
 
+        System.out.print("Sum :" + sum);
+        System.out.println();
+        System.out.print("Average :" + average);
 
     }
 
@@ -11,7 +19,7 @@ class SumAndAverage2DArray{
     public static int[][] inputArray2D(){
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Welcome to 2D Array Maker Method");
+        System.out.print("Welcome to 2D Array Maker Method\n");
         System.out.print("Enter Row: ");
         int Rows = input.nextInt();
         System.out.print("ENter Column : ");
@@ -32,7 +40,7 @@ class SumAndAverage2DArray{
         return NewArray;
     }
 
-    public static long sum(int[][] my2DArray){
+    public static long Sum(int[][] my2DArray){
         long sum = 0;
 
         int Rowindex = 0;
@@ -57,16 +65,18 @@ class SumAndAverage2DArray{
         while(row < my2DArray.length){
             int column = 0;
             while(column < my2DArray[row].length){
-                sum += my2DArray[row][column]
+                sum += my2DArray[row][column];
                 count++;
                 column++;
             }
             row++;
         }
         
-        double average = sum / count;
+        double average = (double)sum / count;
         return average;
     }
+
+
 
 
 }
