@@ -1,6 +1,6 @@
 
 public class TestClasses {
-    // instense 
+    // instense  or property
     int noOfWheels;
     String color;
     float maxSpeed;
@@ -11,6 +11,7 @@ public class TestClasses {
 
     public void drive(){
         System.out.print("Car is Driving");
+        currentFuelInLiters--;
     }
 
     public void addFuel(float fuel){
