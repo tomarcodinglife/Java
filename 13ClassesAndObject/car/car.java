@@ -1,7 +1,7 @@
 
-    package car;
+    package Car;
 
-    public class car {
+    public class Car {
         // instense  or property
         int noOfWheels;
         String color;
@@ -11,7 +11,7 @@
 
         // method
 
-        public car start(){
+        public Car start(){
             if (currentFuelInLiters == 0 || currentFuelInLiters > 0) {
                 System.out.println("Please refule the car");
             }else if (currentFuelInLiters < 3) {
@@ -20,7 +20,7 @@
             }else{
                 System.out.println("Car Star.. hunnnnnnnn.....");
             }
-            return this;
+            return this; // this refer current class instense  or property
         }
 
         public void drive(){
@@ -34,6 +34,10 @@
 
         public void addFuel(float fuel){
             currentFuelInLiters += fuel;
+        }
+
+        public void refuel(float currentFuelInLiters){
+            this.currentFuelInLiters += currentFuelInLiters;
         }
 
         public float getCurrectFuelLevel(){
