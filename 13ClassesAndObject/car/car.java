@@ -3,12 +3,26 @@
 
     public class Car {
         // instense  or property
-        int noOfWheels;
+        int wheels;
         String color;
         float maxSpeed;
         float currentFuelInLiters;
         int noOfSeats;
 
+        // Default Constructor
+        public Car(){
+            System.out.println("Car object created")
+        }
+
+        /*Parameter Constructor Example */
+        public Car(String color, int wheels, float maxSpeed){
+            this.color = color;
+            this.wheels = wheels;
+            this.maxSpeed = maxSpeed;
+        }
+
+
+    
         // method
 
         public Car start(){
@@ -24,7 +38,7 @@
         }
 
         public void drive(){
-            if (currentFuelInLiters >= 0) {
+            if (currentFuelInLiters <= 0) {
                 System.out.println("Car not Starting please refule");
             }else{
                 currentFuelInLiters--;
@@ -45,5 +59,5 @@
             return currentFuelInLiters; 
 
         }
-        
+
     }
