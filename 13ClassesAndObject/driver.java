@@ -2,7 +2,7 @@
 
 import Car.Car;
 
-public class Driver {
+public class driver {
 
     static int minAgeForDriving=18;
     int age;
@@ -19,21 +19,25 @@ public class Driver {
         // car myCar = new car();
         // myCar.addFuel(5);
         // myCar.drive();
-        // System.out.println(myCar.getCurrectFuelLevel());
+        // System.out.println(myCar.getCurrentFuelLevel());
         // myCar.drive();
         // myCar.drive();
         // myCar.drive();
         // myCar.addFuel(10);
         // myCar.drive();
-        // System.out.println(myCar.getCurrectFuelLevel());
+        // System.out.println(myCar.getCurrentFuelLevel());
 
-        Car Mercedes = new Car();
-        Mercedes.addFuel(8);
-        Mercedes.start().drive();
-        Mercedes.getCurrectFuelLevel();
+        // Car Mercedes = new Car();
+        // Mercedes.addFuel(8);
+        // Mercedes.start().drive();
+        // Mercedes.getCurrentFuelLevel();
         
-        Driver myDriver = new Driver();
-        myDriver.dateofLicence = "01/January/2026";
+        // Driver myDriver = new Driver();
+        // myDriver.dateofLicence = "01/January/2026";
+
+
+        Car swift = new Car();
+        swift.start();
 
     }
 

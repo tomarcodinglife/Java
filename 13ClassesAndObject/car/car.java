@@ -1,8 +1,8 @@
 
-    package Car;
+package Car;
 
-    public class Car {
-        // instense  or property
+public class Car {
+        // instanse  or property
         int wheels;
         String color;
         float maxSpeed;
@@ -11,28 +11,26 @@
 
         // Default Constructor
         public Car(){
-            System.out.println("Car object created")
+            this.wheels = 4;
+            this.noOfSeats = 5;
+            this.currentFuelInLiters = 3;
+            System.out.println("Car object created");
         }
 
         /*Parameter Constructor Example */
-        public Car(String color, int wheels, float maxSpeed){
+        public Car(String color, float maxSpeed){
             this.color = color;
-            this.wheels = wheels;
             this.maxSpeed = maxSpeed;
         }
-
-
     
-        // method
-
+        // method   
         public Car start(){
-            if (currentFuelInLiters == 0 || currentFuelInLiters > 0) {
+            if (currentFuelInLiters <= 0 ) {
                 System.out.println("Please refule the car");
             }else if (currentFuelInLiters < 3) {
                 System.out.println("Please refule the car because car run in reserved mode");
-                ;
             }else{
-                System.out.println("Car Star.. hunnnnnnnn.....");
+                System.out.println("Car Start.. hunnnnnnnn.....");
             }
             return this; // this refer current class instense  or property
         }
@@ -54,10 +52,10 @@
             this.currentFuelInLiters += currentFuelInLiters;
         }
 
-        public float getCurrectFuelLevel(){
+        public float getCurrentFuelLevel(){
             System.out.println(currentFuelInLiters);
             return currentFuelInLiters; 
 
         }
 
-    }
+}
