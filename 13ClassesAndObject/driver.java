@@ -36,8 +36,10 @@ public class driver {
         // myDriver.dateofLicence = "01/January/2026";
 
 
-        Car swift = new Car();
-        swift.start();
+        Car swift = new Car(color:"Black", maxSpeed:250);
+        swift.start().drive();
+        // System.out.print(swift.color)
+
 
     }
 

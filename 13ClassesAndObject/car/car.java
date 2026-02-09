@@ -18,7 +18,7 @@ public class Car {
         }
 
         /*Parameter Constructor Example */
-        public Car(String color, float maxSpeed){
+        public Car (String color, float maxSpeed){
             this.color = color;
             this.maxSpeed = maxSpeed;
         }
