@@ -2,33 +2,47 @@
 package Car;
 
 public class Car {
-        // instanse  or property
+        // instance  or property
         int wheels;
         String color;
         float maxSpeed;
         float currentFuelInLiters;
         int noOfSeats;
 
-        // Default Constructor
-        public Car(){
-            this.wheels = 4;
-            this.noOfSeats = 5;
-            this.currentFuelInLiters = 3;
-            System.out.println("Car object created");
-        }
-
         /*Parameter Constructor Example */
         public Car (String color, float maxSpeed){
             this.color = color;
             this.maxSpeed = maxSpeed;
+            wheels = 4;
+            noOfSeats = 5;
+            currentFuelInLiters = 3;
+            System.out.println("Car object created");
         }
+
+        // Default Constructor
+        public Car(){
+            this("Black", 150); // this line is first work preority 
+            
+        }
+
+        // public Car (){
+        //     color = "Black";
+        //     maxSpeed = 150;
+        //     wheels = 4;
+        //     noOfSeats = 5;
+        //     currentFuelInLiters = 3;
+        //     System.out.println("Car object created");
+        // }
+
+
+
     
         // method   
         public Car start(){
             if (currentFuelInLiters <= 0 ) {
-                System.out.println("Please refule the car");
+                System.out.println("Please refuel the car");
             }else if (currentFuelInLiters < 3) {
-                System.out.println("Please refule the car because car run in reserved mode");
+                System.out.println("Please refuel the car because car run in reserved mode");
             }else{
                 System.out.println("Car Start.. hunnnnnnnn.....");
             }
@@ -37,7 +51,7 @@ public class Car {
 
         public void drive(){
             if (currentFuelInLiters <= 0) {
-                System.out.println("Car not Starting please refule");
+                System.out.println("Car not Starting please refuel");
             }else{
                 currentFuelInLiters--;
                 System.out.println("Car is Driving Bruuhhhh.....");
@@ -55,7 +69,6 @@ public class Car {
         public float getCurrentFuelLevel(){
             System.out.println(currentFuelInLiters);
             return currentFuelInLiters; 
-
         }
 
 }
