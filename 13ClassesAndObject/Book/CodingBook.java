@@ -54,6 +54,18 @@ public class CodingBook {
         System.out.println("-------------------------------------------------");
         JavaScript.borrowBook();
         
+        
+        System.out.println("-------------------------------------------------");
+        JavaBook.returnBook();
+        System.out.println(JavaBook.noOfBook);
+        JavaBook.returnBook();
+        System.out.println(JavaBook.noOfBook);
+        JavaBook.returnBook();
+        System.out.println(JavaBook.noOfBook);
+        JavaBook.returnBook();
+
+        JavaBook.borrowBook();
+        
     }
 
 }

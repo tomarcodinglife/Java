@@ -9,6 +9,7 @@ public class Book {
     String author;
     long isbn;
     int noOfBook;
+    int volume;
     boolean isBorrowed;
 
 
@@ -27,6 +28,7 @@ public class Book {
         this.author = author;
         this.isbn = isbn;
         this.noOfBook = noOfBook;
+        this.volume = noOfBook;
         totalTypeOfBook++; // every single created object total book increase +1
         System.out.println("Book Created " + title); 
     }
@@ -48,8 +50,16 @@ public class Book {
             noOfBook--;
             showRemainingBooks();
         }else {
-            showRemainingBooks();
             System.out.println("Sorry I have not copy available of " + title);
+        }
+    }
+
+    public void returnBook(){
+        if(noOfBook < volume){
+            noOfBook++;
+            System.out.println("Your Book Return");
+        }else{
+            System.out.println("i have book already in my library ");
         }
     }
     
