@@ -27,13 +27,13 @@ public class Course {
         if (enrolldments < maxCapasity) {
             enrolledStudent[enrolldments] = studentName;
             enrolldments++;
-            System.out.println(studentName + "Student Enrolled");
+            System.out.println(studentName + " Student Enrolled" + " in " + courseName);
         }else{
-            System.out.println("Course Max Capasity Full" + studentName);
+            System.out.println(courseName + " Max Capasity Full " + studentName);
         }
     }
 
-    public void unenrollStudent(int studentName){
+    public void unenrollStudent(String studentName){
         
         if(enrolldments == 0){
             System.out.println("No Student to remove");
