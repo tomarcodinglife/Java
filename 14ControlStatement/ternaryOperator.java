@@ -11,14 +11,14 @@ public class ternaryOperator {
         int num2 = input.nextInt();
 
         if (num1 > num2) {
-            System.out.println(num1 + "is greatest number");
+            System.out.println(num1 + " is greatest number");
         }else{
-            System.out.println(num2 + "is greatest number");
+            System.out.println(num2 + " is greatest number");
         }
 
         // TernaryOperator
-        
-
+        int greaterNum = num1 > num2 ? num1 : num2;
+        System.out.println("Ternary Operator : " + greaterNum + " is greatest number");
 
     }
     
