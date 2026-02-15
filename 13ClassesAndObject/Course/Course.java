@@ -70,5 +70,4 @@ public class Course {
     public void showTotalStudent(){
          System.out.println("Total students in " + courseName + ": " + enrolldments);
     }
-
 }
