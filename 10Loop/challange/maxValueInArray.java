@@ -16,7 +16,8 @@ public class maxValueInArray {
             myArray[i] = input.nextInt();
         }
 
-        // 
+        // useing for loop 
+
         int maxValue = myArray[0];
 
         for(int i =0; i < myArray.length; i++){
@@ -25,9 +26,17 @@ public class maxValueInArray {
             }
         }
 
-        System.out.print("Max Number is " + maxValue);
+        System.out.println("Max Number is " + maxValue);
 
+        // using for each
+        int max = Integer.MIN_VALUE;
+
+        for(int num : myArray){
+            if (max < num) {
+                max = num;
+            }   
+        }
+        System.out.println("Max Value is " + max);
     }
-
 
 }
