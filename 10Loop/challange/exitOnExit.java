@@ -38,6 +38,10 @@ public class exitOnExit {
 
                 System.out.println("Array Created Sucessfully");
 
+                for(int val : myArray ){
+                    System.out.println(val);
+                }
+
             } else if (userInput.equalsIgnoreCase("string")) {
 
                 System.out.println("Enter Array Length : ");
@@ -54,10 +58,14 @@ public class exitOnExit {
                 do {
                     System.out.println("Enter the " + (index + 1) + "Value : ");
                     myArray[index] = input.nextLine();
-                    index++;
+                    index++; 
                 } while (index < myArray.length);
 
                 System.out.println("Array Created");
+
+                for(String val : myArray){
+                    System.out.print(val + " ");
+                }
 
             }
         }
