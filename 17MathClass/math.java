@@ -17,7 +17,7 @@ public class math {
         System.out.println("Random No. valueC : " + Math.ceil(Math.random() * 100000 + 1));
         System.out.println("Squar myValue : " + Math.sqrt(myValue));
         System.out.println("Squar myValue : " + Math.PI);
-        System.out.println("Squar myValue : " + Math);
+        System.out.println("Squar myValue : " + Math.pow(myValue, 2));
 
     }
 
