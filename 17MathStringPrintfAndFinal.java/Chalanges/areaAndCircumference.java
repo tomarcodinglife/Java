@@ -32,7 +32,7 @@ public class areaAndCircumference {
 
     public static void main(String[] args) {
         Scanner input =  new Scanner(System.in);
-        System.out.println("Welcome to Circle Worlds");
+        System.out.println("Welcome to Circle World");
         System.out.println("Enter the circle radious : ");
 
         double radius  = input.nextDouble();
