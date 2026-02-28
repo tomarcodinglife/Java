@@ -9,15 +9,23 @@ public class CarMethodFirst {
     private int carCurrentFuelLevel;
     private int carPrice;
     private int carSeat;
-    private int payCarInsurence;
-    private int payCarRoadTax;
+    private int carInsurence;
+    private int carRoadTax;
     private boolean carPolution;
     private boolean carInsurenceValid;
+    private boolean carRoadTaxValid;
+    private String carInsurenceCompany;
 
-    private static void message(String msg){
-        System.out.print(msg);
+    // Wrapper Class Use
+    private static void message(String msg, int...number){
+        if (number.length == 0) {
+            System.out.println(msg);
+        }else{
+            System.out.println(msg + number[0]);
+        }
     }
 
+    // Method
     private void carColour(String colour){
         this.carColour = colour;
     }
@@ -26,12 +34,20 @@ public class CarMethodFirst {
         this.carPrice = carPrice;
     }
 
-    private int doCarInsurence(int years){
+    private int payCarInsurence(int years, int amount, String CompanyName){
         this.carInsurenceValid = true;
         int carInsurenceAmount = years * 3000;
-        System.out.print("Paid Amount" + carInsurenceAmount);
+        this.carInsurenceCompany = CompanyName;
+        System.out.printf("Car Insurence Done %s for %d years on %d", CompanyName, years, amount);
         return carInsurenceAmount;
     }
+
+    private int payCarRoadTax (int years, int amount){
+        this.carRoadTaxValid = true;
+        int carRoadTaxAmount = years * amount;
+        return carRoadTaxAmount;
+    }
+
 
     // Constructor
     private CarMethodFirst (String carModel, String carManufacturerCompany, int carManufacturingYear, int carSeat) {
@@ -60,13 +76,11 @@ public class CarMethodFirst {
     }
 
     private void setFuelType(String fuelType){
-        
-
         this.carFuelType = fuelType;
     }
 
 
-    // Main Mrthod
+    // Main Method
     public static void main(String[] args) {
         CarMethodFirst Nexon = new CarMethodFirst("Nexon", "Tata",2012, 7);
 
