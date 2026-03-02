@@ -1,14 +1,14 @@
 package car.carMethod;
 
 public class CarMethodSecond {
-    private String carModel;
-    private String carManufacturerCompany;
-    private int carManufacturingYear;
+    private final String carModel;
+    private final String carManufacturerCompany;
+    private final int carManufacturingYear;
     private String carColour;
     private String carFuelType;
     private int carCurrentFuelLevel;
     private int carPrice;
-    private int carSeat;
+    private final int carSeat;
     private int carInsurence;
     private int carRoadTax;
     private boolean carPolution;
@@ -33,11 +33,11 @@ public class CarMethodSecond {
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
-        str.append("Model").append(carModel).append("\n");
-        str.append("Manufacturer").append(carManufacturerCompany).append("\n");
-        str.append("Color").append(carColour).append("\n");
-        str.append("Fuel Type").append(carFuelType).append("\n");
-        str.append("Fuel Level").append(carCurrentFuelLevel).append("\n");
+        str.append("Model : ").append(carModel).append("\n");
+        str.append("Manufacturer : ").append(carManufacturerCompany).append("\n");
+        str.append("Color : ").append(carColour).append("\n");
+        str.append("Fuel Type : ").append(carFuelType).append("\n");
+        str.append("Fuel Level : ").append(carCurrentFuelLevel).append("\n");
 
         return str.toString();
     }
@@ -93,10 +93,24 @@ public class CarMethodSecond {
         // this.carPrice = price;
     }
 
+    public void setCarFuelType(String fuelType){
+        this.carFuelType = fuelType;
+    }
+
 
     public static void main(String[] args) {
-        
+        CarMethodSecond Ertiga = new CarMethodSecond("Ertiga ", "Maruti Suzuki", 2015, 7);
+        System.out.println(Ertiga);
 
+        System.out.println(" ----------------------------------- ");
+
+        Ertiga.carFuel("CNG");
+         System.out.println(Ertiga);
+
+          System.out.println(" ----------------------------------- "); 
+
+        Ertiga.setCarFuelType("Desel");
+         System.out.println(Ertiga);
     }
 
 
