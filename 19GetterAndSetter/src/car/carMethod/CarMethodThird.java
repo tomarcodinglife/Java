@@ -39,9 +39,47 @@ public class CarMethodThird {
         return myStr.toString();
     }
 
+    void message(String msg){
+        if (msg != null && !msg.isEmpty()) {
+            System.out.println(msg);
+        }else{
+            System.out.println("Please Enter Valid Message");
+        }
+    }
+
+    void message(String msg, int num){
+        if (msg != null && num != 0 && !msg.isEmpty()) {
+            System.out.println(msg + " :  " + num);
+        }else{
+            System.out.println("Please Enter Valid Message");
+        }
+    }
+
+    // getter
+
+    public String getCarColour() {
+        return carColour;
+    }
+
+    // setter
+    public void setCarColour(String carColour) {
+        if (carColour != null && !carColour.isEmpty()) {
+            this.carColour = carColour;
+        }else{
+            message("Invalid Details");
+        }
+
+        
+    }
+
+
+    public static void main(String[] args) {
+        
+    }
 
 
 
+    
 
 
 
