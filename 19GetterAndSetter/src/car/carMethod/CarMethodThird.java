@@ -16,7 +16,7 @@ public class CarMethodThird {
     private boolean carRoadTaxValid;
     private String carInsurenceCompany;
 
-    CarMethodThird(String carModel, String carManufactureCompany, int carManufacturingYear, int carSeat){
+    public CarMethodThird(String carModel, String carManufactureCompany, int carManufacturingYear, int carSeat){
         this.carModel = carModel;
         this.carManufacturerCompany = carManufactureCompany;
         this.carManufacturingYear = carManufacturingYear;
@@ -26,7 +26,7 @@ public class CarMethodThird {
         this.carColour = "Black";
         this.carFuelType = "Petrol";
         this.carCurrentFuelLevel = 2;
-        System.out.printf("Object Created by Car Method Third");
+        System.out.printf("Object Created by Car Method Third \n");
     }
 
     @Override
@@ -68,20 +68,16 @@ public class CarMethodThird {
         }else{
             message("Invalid Details");
         }
-
         
     }
 
 
     public static void main(String[] args) {
-        
+        CarMethodThird innova = new CarMethodThird("G-SLF", "Toyota", 2023, 7);
+        System.out.println(innova);
+
+
     }
-
-
-
-    
-
-
 
 
     
