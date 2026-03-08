@@ -21,6 +21,14 @@ public class employee {
         return str.toString();
     }
 
+    public String displayEmployee(){
+        StringBuilder str = new StringBuilder();
+        str.append("Name : ").append(employeeName).append("\n");
+        str.append("Age : ").append(employeeAge).append("\n");
+        str.append("Salary : ").append(employeeSalary).append("\n");
+        return str.toString();
+    }
+
     public void setEmployeeName(String employeeName) {
         this.employeeName = employeeName;
     }
@@ -45,6 +53,6 @@ public class employee {
         return employeeSalary;
     }
 
-    
+
 
 }
