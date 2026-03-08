@@ -1,6 +1,6 @@
 package car.carMethod;
 
-public class CarMethodSecond {
+public class CarMethodDefault {
     private final String carModel;
     private final String carManufacturerCompany;
     private final int carManufacturingYear;
@@ -16,7 +16,7 @@ public class CarMethodSecond {
     private boolean carRoadTaxValid;
     private String carInsurenceCompany;
 
-    CarMethodSecond(String carModel, String carManufacturerCompany, int carManufacturingYear, int carSeat){
+    CarMethodDefault(String carModel, String carManufacturerCompany, int carManufacturingYear, int carSeat){
         this.carModel = carModel;
         this.carManufacturerCompany = carManufacturerCompany;
         this.carManufacturingYear = carManufacturingYear;
@@ -99,7 +99,7 @@ public class CarMethodSecond {
 
 
     public static void main(String[] args) {
-        CarMethodSecond Ertiga = new CarMethodSecond("Ertiga ", "Maruti Suzuki", 2015, 7);
+        CarMethodDefault Ertiga = new CarMethodDefault("Ertiga ", "Maruti Suzuki", 2015, 7);
         System.out.println(Ertiga);
 
         System.out.println(" ----------------------------------- ");

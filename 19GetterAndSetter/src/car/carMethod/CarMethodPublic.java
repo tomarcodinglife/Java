@@ -1,6 +1,6 @@
 package car.carMethod;
 
-public class CarMethodThird {
+public class CarMethodPublic {
     private final String carModel;
     private final String carManufacturerCompany;
     private final int carManufacturingYear;
@@ -16,7 +16,7 @@ public class CarMethodThird {
     private boolean carRoadTaxValid;
     private String carInsurenceCompany;
 
-    public CarMethodThird(String carModel, String carManufactureCompany, int carManufacturingYear, int carSeat){
+    public CarMethodPublic(String carModel, String carManufactureCompany, int carManufacturingYear, int carSeat){
         this.carModel = carModel;
         this.carManufacturerCompany = carManufactureCompany;
         this.carManufacturingYear = carManufacturingYear;
@@ -73,7 +73,7 @@ public class CarMethodThird {
 
 
     public static void main(String[] args) {
-        CarMethodThird innova = new CarMethodThird("G-SLF", "Toyota", 2023, 7);
+        CarMethodPublic innova = new CarMethodPublic("G-SLF", "Toyota", 2023, 7);
         System.out.println(innova);
 
 

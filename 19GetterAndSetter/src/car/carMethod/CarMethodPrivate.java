@@ -1,6 +1,6 @@
 package car.carMethod;
 
-public class CarMethodFirst {
+public class CarMethodPrivate {
     private String carModel;
     private String carManufacturerCompany;
     private int carManufacturingYear;
@@ -17,7 +17,7 @@ public class CarMethodFirst {
     private String carInsuranceCompany;
     
     // Constructor
-    private CarMethodFirst (String carModel, String carManufacturerCompany, int carManufacturingYear, int carSeat) {
+    private CarMethodPrivate (String carModel, String carManufacturerCompany, int carManufacturingYear, int carSeat) {
         this.carModel = carModel;
         this.carManufacturerCompany = carManufacturerCompany;
         this.carManufacturingYear = carManufacturingYear;
@@ -93,7 +93,7 @@ public class CarMethodFirst {
 
     // Main Method
     public static void main(String[] args) {
-        CarMethodFirst Nexon = new CarMethodFirst("Nexon", "Tata",2012, 7);
+        CarMethodPrivate Nexon = new CarMethodPrivate("Nexon", "Tata",2012, 7);
         System.out.println(Nexon);
 
         Nexon.setColor("White");
