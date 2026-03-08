@@ -24,7 +24,7 @@ public class BankAccount {
 
     public void depositMoney(double money){
         if(money <= 0 ){
-            System.out.print("Invalid Deposit");
+            System.out.println("Invalid Deposit");
         }else{
             balance += money;
         }
