@@ -18,7 +18,6 @@ public class customer {
         System.out.println(SBI_CUS_A0002);
         SBI_CUS_A0002.depositMoney(6500);
 
-
         System.out.println(SBI_CUS_A0003);
         SBI_CUS_A0003.depositMoney(8210);
 
@@ -33,7 +32,6 @@ public class customer {
 
         SBI_CUS_A0001.withdrawMoney(50000); // You withdraw 4900.00
         System.out.println(SBI_CUS_A0001);
-
 
         SBI_CUS_A0001.depositMoney(-532);  // Invalid Deposit
         System.out.println(SBI_CUS_A0001);
