@@ -10,10 +10,10 @@ public class test {
 
         EMP001.setEmployeeName("Rahul");
         System.out.println(EMP001);
-
-        
-
+    
     }
+
+    
 
     
 
