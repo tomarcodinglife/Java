@@ -1,49 +1,42 @@
-# ☕ Java Lesson – Loops
+# ☕ Java Lesson – Loops, Nested Loops, Pattern Printing, Break & Continue
 
 Is lesson me hum seekhenge:
 
-- Loop kya hota hai
-- Java me loops kyu use hote hain
-- for loop
-- while loop
-- do-while loop
-- Loops ka comparison
+- Loops kya hote hain
+- Java me loops ke types
+- Nested loops
+- Pattern printing
+- Break statement
+- Continue statement
 
 ---
 
 # 📌 Loop Kya Hota Hai?
 
-Loop ek **control structure** hai jo kisi code ko **bar-bar execute karne ke liye use hota hai**.
+Loop ek **control structure** hai jo kisi code ko **multiple times execute karne ke liye use hota hai**.
 
 Example:
 
 ```
-Agar hume "Hello" 100 baar print karna ho
+Agar hume 1 se 100 tak number print karna ho
 ```
 
 Without loop:
 
 ```
-System.out.println("Hello");
-System.out.println("Hello");
-System.out.println("Hello");
+System.out.println(1);
+System.out.println(2);
+System.out.println(3);
 ...
-100 times
 ```
 
-Loop use karne se code short ho jata hai.
-
-Example:
-
-```
-Loop → code ko multiple times run karna
-```
+Loop use karne se code short aur efficient ho jata hai.
 
 ---
 
 # 📌 Java me Loops ke Types
 
-Java me **3 main loops** hote hain:
+Java me 3 types ke loops hote hain:
 
 ```
 Loops
@@ -57,15 +50,7 @@ Loops
 
 # 1️⃣ for Loop
 
-`for loop` tab use hota hai jab **number of iterations pata ho**.
-
-Example:
-
-```
-1 se 10 tak print karna
-```
-
----
+`for loop` tab use hota hai jab **iterations ka exact number pata ho**.
 
 ### Syntax
 
@@ -75,17 +60,7 @@ for(initialization; condition; update){
 }
 ```
 
-Explanation:
-
-| Part | Meaning |
-|-----|--------|
-| initialization | loop start value |
-| condition | loop kab tak chalega |
-| update | value change |
-
----
-
-### Example Program
+### Example
 
 ```java
 public class ForLoopExample {
@@ -93,9 +68,7 @@ public class ForLoopExample {
     public static void main(String[] args) {
 
         for(int i = 1; i <= 5; i++){
-
             System.out.println(i);
-
         }
 
     }
@@ -103,9 +76,7 @@ public class ForLoopExample {
 }
 ```
 
----
-
-### Output
+Output:
 
 ```
 1
@@ -115,35 +86,21 @@ public class ForLoopExample {
 5
 ```
 
-Explanation:
-
-```
-i = 1 se start
-condition i <= 5
-har loop ke baad i++
-```
-
 ---
 
 # 2️⃣ while Loop
 
-`while loop` tab use hota hai jab **iterations ka exact number pata na ho**.
-
-Loop tab tak chalega jab tak **condition true ho**.
-
----
+`while loop` tab use hota hai jab **iterations ka number fix na ho**.
 
 ### Syntax
 
 ```java
 while(condition){
-    // code
+   // code
 }
 ```
 
----
-
-### Example Program
+### Example
 
 ```java
 public class WhileLoopExample {
@@ -153,10 +110,8 @@ public class WhileLoopExample {
         int i = 1;
 
         while(i <= 5){
-
             System.out.println(i);
             i++;
-
         }
 
     }
@@ -166,32 +121,9 @@ public class WhileLoopExample {
 
 ---
 
-### Output
-
-```
-1
-2
-3
-4
-5
-```
-
-Explanation:
-
-```
-i = 1
-jab tak i <= 5 hai loop chalta rahega
-```
-
----
-
 # 3️⃣ do-while Loop
 
-`do-while` loop me **code kam se kam ek baar execute hota hi hota hai**.
-
-Condition baad me check hoti hai.
-
----
+Is loop me **code kam se kam ek baar execute hota hi hota hai**.
 
 ### Syntax
 
@@ -202,9 +134,7 @@ do{
 while(condition);
 ```
 
----
-
-### Example Program
+### Example
 
 ```java
 public class DoWhileExample {
@@ -214,10 +144,8 @@ public class DoWhileExample {
         int i = 1;
 
         do{
-
             System.out.println(i);
             i++;
-
         }
         while(i <= 5);
 
@@ -228,40 +156,149 @@ public class DoWhileExample {
 
 ---
 
-### Output
+# 📌 Nested Loops
+
+Jab ek loop ke andar dusra loop hota hai use **Nested Loop** kehte hain.
+
+Example structure:
 
 ```
-1
-2
-3
-4
-5
+Outer Loop
+   └── Inner Loop
 ```
 
----
-
-# 📊 Loops Comparison
-
-| Loop | Condition Check | Use |
-|-----|----------------|-----|
-| for | start me | fixed iterations |
-| while | start me | unknown iterations |
-| do-while | end me | atleast 1 execution |
-
----
-
-# Example – Table Print Using Loop
+### Syntax
 
 ```java
-public class TableExample {
+for(){
+    for(){
+        // code
+    }
+}
+```
+
+---
+
+# Example – Nested Loop
+
+```java
+public class NestedLoopExample {
 
     public static void main(String[] args) {
 
-        int num = 5;
+        for(int i = 1; i <= 3; i++){
+
+            for(int j = 1; j <= 3; j++){
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+    }
+
+}
+```
+
+Output:
+
+```
+* * *
+* * *
+* * *
+```
+
+---
+
+# ⭐ Pattern Printing
+
+Pattern printing me **nested loops use hote hain**.
+
+---
+
+## Pattern 1 – Square Pattern
+
+```java
+public class SquarePattern {
+
+    public static void main(String[] args) {
+
+        for(int i = 1; i <= 4; i++){
+
+            for(int j = 1; j <= 4; j++){
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+    }
+
+}
+```
+
+Output:
+
+```
+* * * *
+* * * *
+* * * *
+* * * *
+```
+
+---
+
+## Pattern 2 – Right Triangle
+
+```java
+public class TrianglePattern {
+
+    public static void main(String[] args) {
+
+        for(int i = 1; i <= 5; i++){
+
+            for(int j = 1; j <= i; j++){
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+    }
+
+}
+```
+
+Output:
+
+```
+*
+* *
+* * *
+* * * *
+* * * * *
+```
+
+---
+
+# 📌 Break Statement
+
+`break` statement ka use **loop ko immediately terminate karne ke liye hota hai**.
+
+### Example
+
+```java
+public class BreakExample {
+
+    public static void main(String[] args) {
 
         for(int i = 1; i <= 10; i++){
 
-            System.out.println(num + " x " + i + " = " + (num * i));
+            if(i == 5){
+                break;
+            }
+
+            System.out.println(i);
 
         }
 
@@ -270,26 +307,83 @@ public class TableExample {
 }
 ```
 
+Output:
+
+```
+1
+2
+3
+4
+```
+
+Explanation:
+
+```
+Jab i = 5 hua
+loop break ho gaya
+```
+
 ---
 
-### Output
+# 📌 Continue Statement
+
+`continue` statement current iteration ko skip karta hai aur next iteration start karta hai.
+
+### Example
+
+```java
+public class ContinueExample {
+
+    public static void main(String[] args) {
+
+        for(int i = 1; i <= 5; i++){
+
+            if(i == 3){
+                continue;
+            }
+
+            System.out.println(i);
+
+        }
+
+    }
+
+}
+```
+
+Output:
 
 ```
-5 x 1 = 5
-5 x 2 = 10
-5 x 3 = 15
-...
-5 x 10 = 50
+1
+2
+4
+5
 ```
+
+Explanation:
+
+```
+i = 3 skip ho gaya
+```
+
+---
+
+# 📊 Break vs Continue
+
+| Statement | Work |
+|-----------|------|
+| break | loop ko completely stop karta hai |
+| continue | current iteration skip karta hai |
 
 ---
 
 # ⚡ Important Points
 
-- Loop code repetition ko reduce karta hai
-- `for loop` fixed iterations ke liye best hai
-- `while loop` condition based loops ke liye use hota hai
-- `do-while` me code **kam se kam ek baar execute hota hai**
+- Loop repetitive tasks ke liye use hota hai
+- Nested loops pattern printing me use hote hain
+- `break` loop terminate karta hai
+- `continue` iteration skip karta hai
+- Pattern printing programming practice ke liye important hai
 
 ---
 
@@ -297,17 +391,9 @@ public class TableExample {
 
 1️⃣ Loop kya hota hai?  
 2️⃣ Java me kitne types ke loops hote hain?  
-3️⃣ for loop aur while loop me kya difference hai?  
-4️⃣ do-while loop ka special feature kya hai?  
-5️⃣ Infinite loop kya hota hai?
-
-Example infinite loop:
-
-```java
-while(true){
-    System.out.println("Hello");
-}
-```
+3️⃣ Nested loop kya hota hai?  
+4️⃣ Break aur Continue me kya difference hai?  
+5️⃣ Pattern printing me nested loop kyu use hota hai?
 
 ---
 
@@ -315,13 +401,13 @@ while(true){
 
 Is lesson me humne seekha:
 
-✔ Loops kya hote hain  
-✔ for loop  
-✔ while loop  
-✔ do-while loop  
-✔ loops ka comparison  
+✔ Loops  
+✔ Nested loops  
+✔ Pattern printing  
+✔ Break statement  
+✔ Continue statement  
 
-Loops programming ka **bahut important concept hain jo repetitive tasks ko simple bana dete hain**.
+Ye concepts **DSA aur logic building ke liye bahut important hain**.
 
 ---
 
@@ -329,6 +415,6 @@ Loops programming ka **bahut important concept hain jo repetitive tasks ko simpl
 
 Next lesson me hum seekhenge:
 
-- Nested Loops
-- Pattern Printing
-- Break and Continue
+- Arrays
+- Array traversal
+- Multi dimensional arrays
