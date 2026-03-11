@@ -1,4 +1,4 @@
-package 22EqualsAndHashCode.equal.Person;
+package equal;
 
 public class Person {
     private String name;
@@ -43,6 +43,18 @@ public class Person {
         str.append("Age : ").append(age).append("\n");
         str.append("ID : ").append(id).append("\n");
         return str.toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (! (obj instanceof Person)) {
+            return false;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Person person = (Person) obj;
+        return name.equals(person.name) && age == person.age && id == person.id ;
     }
 
 
