@@ -2,7 +2,7 @@ package heroBike;
 import method.bike.Bike;
 
 public class Hero extends Bike{
-    private int price;
+    protected int price;
 
     public Hero(String colour, int manufecturingYear, String model, int price){
         super(colour, manufecturingYear, model);
