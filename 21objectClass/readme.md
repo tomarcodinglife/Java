@@ -1,136 +1,41 @@
-# ☕ Java Lesson – Objects, Predefined Objects, super, toString, import & package
+# ☕ Java Lesson – Java Objects, Predefined Methods, super, toString, import & package
 
 Is lesson me hum seekhenge:
 
-- Java Objects
-- Predefined Objects
+- Java Objects aur Object class
+- Predefined Object Methods: `getClass()`, `hashCode()`, `wait()`, `notify()`, `notifyAll()`, `clone()`, `equals()`, `finalize()`, `toString()`
 - `super` keyword usage
 - `toString()` method override
-- `import` & `package` usage
-- Examples ke saath implementation
+- Import & Package usage
+- Examples ke saath
 
 ---
 
-# 1️⃣ Java Objects
+# 1️⃣ Java Object Class
 
-- **Object** = real-world entity ka representation  
-- Java me **class** blueprint hoti hai, **object** class ka instance  
-- Object me **state (variables)** aur **behavior (methods)** hota hai  
+- Java me **har class Object class se inherit hoti hai**  
+- Object class me kuch **predefined methods** hote hain jo sabhi objects ke liye available hain
 
-### Syntax – Object Creation
+### Common Object Methods
 
-```java
-class Car {
-    String model;
-    int price;
-
-    void display(){
-        System.out.println("Model: " + model + ", Price: " + price);
-    }
-}
-
-public class ObjectExample {
-    public static void main(String[] args){
-        Car c1 = new Car(); // Object creation
-        c1.model = "Honda City";
-        c1.price = 1200000;
-        c1.display();
-    }
-}
-```
-
-Output:
-
-```
-Model: Honda City, Price: 1200000
-```
+| Method          | Description |
+|-----------------|------------|
+| `getClass()`     | Object ka class info return karta hai |
+| `hashCode()`     | Object ka hash code return karta hai |
+| `toString()`     | Object ka string representation return karta hai |
+| `equals(Object o)` | Object comparison (content based) |
+| `clone()`        | Object ka shallow copy banata hai |
+| `finalize()`     | Garbage collection se pehle call hota hai |
+| `wait()`         | Thread ko wait state me dalta hai |
+| `notify()`       | Waiting thread ko notify karta hai |
+| `notifyAll()`    | Sab waiting threads ko notify karta hai |
 
 ---
 
-# 2️⃣ Predefined Objects in Java
-
-- Java me kuch **predefined objects** available hote hain  
-- Common predefined objects:
-
-| Object | Package       | Use                                         |
-|--------|---------------|---------------------------------------------|
-| `System` | java.lang   | Standard input, output, error               |
-| `Scanner` | java.util  | User input                                  |
-| `Math`  | java.lang    | Mathematical operations                     |
-| `String`| java.lang    | Text handling                               |
-
-### Example – Predefined Object
+# 2️⃣ Predefined Object Methods Example
 
 ```java
-import java.util.Scanner;
-
-public class PredefinedObjectExample {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in); // predefined object
-        System.out.print("Enter your name: ");
-        String name = sc.nextLine();
-        System.out.println("Hi " + name);
-    }
-}
-```
-
----
-
-# 3️⃣ `super` Keyword
-
-- `super` = parent class ka reference  
-- Use:
-  - Parent class ka **variable access**
-  - Parent class ka **method call**
-  - Parent class ka **constructor call**
-
-### Example – super with method
-
-```java
-class Animal {
-    void eat(){
-        System.out.println("Animal is eating");
-    }
-}
-
-class Dog extends Animal {
-    void eat(){
-        System.out.println("Dog is eating");
-    }
-
-    void show(){
-        eat();       // Dog's eat()
-        super.eat(); // Animal's eat()
-    }
-}
-
-public class SuperExample {
-    public static void main(String[] args){
-        Dog d = new Dog();
-        d.show();
-    }
-}
-```
-
-Output:
-
-```
-Dog is eating
-Animal is eating
-```
-
----
-
-# 4️⃣ `toString()` Method Override
-
-- `toString()` → object ka **string representation return karta hai**  
-- Default `toString()` → className + hashcode  
-- Custom class me override karke meaningful output de sakte hain
-
-### Example – toString() Override
-
-```java
-class Student {
+class Student implements Cloneable {
     String name;
     int age;
 
@@ -141,14 +46,82 @@ class Student {
 
     @Override
     public String toString(){
-        return "Student Name: " + name + ", Age: " + age;
+        return "Name: " + name + ", Age: " + age;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println(name + " object is destroyed by GC");
     }
 }
 
-public class ToStringExample {
+public class ObjectMethodsExample {
+    public static void main(String[] args) throws Exception {
+        Student s1 = new Student("Sujit", 22);
+        Student s2 = new Student("Rahul", 25);
+
+        System.out.println(s1.toString());      // custom toString()
+        System.out.println("s1 HashCode: " + s1.hashCode());
+        System.out.println("s2 HashCode: " + s2.hashCode());
+        System.out.println("s1 Class: " + s1.getClass());
+
+        System.out.println("s1 equals s2? " + s1.equals(s2));
+
+        Student s3 = (Student) s1.clone();     // clone()
+        System.out.println("Cloned s3: " + s3);
+
+        s1 = null;
+        s2 = null;
+        s3 = null;
+
+        System.gc(); // finalize() call try
+    }
+}
+```
+
+Output (example, finalize may vary):
+
+```
+Name: Sujit, Age: 22
+s1 HashCode: 366712642
+s2 HashCode: 1829164700
+s1 Class: class Student
+s1 equals s2? false
+Cloned s3: Name: Sujit, Age: 22
+Sujit object is destroyed by GC
+Rahul object is destroyed by GC
+```
+
+---
+
+# 3️⃣ `super` Keyword Usage
+
+- `super` = parent class ka reference  
+- Parent class **variables**, **methods**, aur **constructor** access karne ke liye use hota hai  
+
+```java
+class Animal {
+    String color = "White";
+    void eat(){
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal {
+    String color = "Black";
+
+    void display(){
+        System.out.println("Dog color: " + color);
+        System.out.println("Animal color: " + super.color);
+        eat();
+        super.eat();
+    }
+}
+
+public class SuperKeywordExample {
     public static void main(String[] args){
-        Student s = new Student("Sujit", 22);
-        System.out.println(s); // Automatically calls toString()
+        Dog d = new Dog();
+        d.display();
     }
 }
 ```
@@ -156,17 +129,57 @@ public class ToStringExample {
 Output:
 
 ```
-Student Name: Sujit, Age: 22
+Dog color: Black
+Animal color: White
+Dog is eating
+Animal is eating
+```
+
+---
+
+# 4️⃣ `toString()` Method Override
+
+- Object class ka `toString()` **default representation return karta hai**  
+- Custom class me override karke meaningful string output create karte hain  
+
+```java
+class Employee {
+    String name;
+    int salary;
+
+    Employee(String n, int s){
+        name = n;
+        salary = s;
+    }
+
+    @Override
+    public String toString(){
+        return "Employee: " + name + ", Salary: " + salary;
+    }
+}
+
+public class ToStringOverrideExample {
+    public static void main(String[] args){
+        Employee e = new Employee("Sujit", 50000);
+        System.out.println(e); // automatically calls toString()
+    }
+}
+```
+
+Output:
+
+```
+Employee: Sujit, Salary: 50000
 ```
 
 ---
 
 # 5️⃣ Import & Package Usage
 
-- **Package** = folder of classes  
-- **Import** = dusre package ki classes use karne ke liye  
+- **Package** → classes organize karne ke liye  
+- **Import** → dusre package ki classes use karne ke liye  
 
-### Example – Package & Import
+### Example – User-defined Package
 
 **File:** `mypackage/Hello.java`
 
@@ -203,21 +216,22 @@ Hello from mypackage
 
 # ⚡ Important Points
 
-- **Object** → class ka instance  
-- **Predefined Objects** → Scanner, System, Math, String  
-- **`super` keyword** → parent class ka reference  
-- **`toString()`** → object representation, override for custom output  
-- **Package** → organize classes, **import** → access classes from package  
+- Object class ke **predefined methods** → getClass(), hashCode(), equals(), clone(), toString(), finalize(), wait(), notify(), notifyAll()  
+- **super keyword** → parent class ka reference  
+- **toString() override** → meaningful object representation  
+- **import & package** → classes ka organization aur reuse  
 
 ---
 
 # 🎯 Interview Questions
 
-1️⃣ Object aur Class me difference kya hai?  
-2️⃣ Predefined objects ka example de sakte ho?  
-3️⃣ `super` keyword ka use kaise hota hai?  
-4️⃣ `toString()` method override ka importance kya hai?  
-5️⃣ Java me package aur import ka use kyu karte hain?  
+1️⃣ Object class ke common methods kya hain?  
+2️⃣ `super` keyword ka use aur example batao  
+3️⃣ `toString()` method override kyun karte hain?  
+4️⃣ `clone()` aur `equals()` me difference kya hai?  
+5️⃣ `finalize()` method kab call hota hai?  
+6️⃣ `wait()`, `notify()`, `notifyAll()` ka basic use kya hai?  
+7️⃣ Package aur import ka purpose kya hai?  
 
 ---
 
@@ -225,11 +239,13 @@ Hello from mypackage
 
 Is lesson me humne seekha:
 
-✔ Java Objects aur unke creation  
-✔ Predefined objects jaise System, Scanner, Math  
-✔ `super` keyword usage (methods, variables, constructors)  
-✔ `toString()` override for custom object output  
-✔ Package aur import ke examples aur syntax  
+✔ Java Object class aur predefined methods  
+✔ `getClass()`, `hashCode()`, `equals()`, `clone()`, `finalize()`, `toString()`, `wait()`, `notify()`, `notifyAll()`  
+✔ `super` keyword usage  
+✔ `toString()` method override  
+✔ Import & Package usage  
+
+Ye lesson **Java me OOP fundamentals, object methods aur package organization** ka complete reference hai.
 
 ---
 
@@ -238,6 +254,6 @@ Is lesson me humne seekha:
 Next lesson me hum seekhenge:
 
 - Polymorphism  
-- Compile-time (Method Overloading)  
-- Runtime (Method Overriding)  
-- Abstract class & Interface
+- Compile-time & Runtime Polymorphism  
+- Method Overloading & Overriding  
+- Abstract Classes & Interface
