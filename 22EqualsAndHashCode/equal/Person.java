@@ -1,44 +1,44 @@
-package EqualsAndHashCode.equal;
+package 22EqualsAndHashCode.equal.Person;
 
-public class Equal {
+public class Person {
     private String name;
     private int age;
     private int id;
 
-    public Equal (String name, int age, int id){
+    public Person (String name, int age, int id){
         this.name = name;
         this.age = age;
         this.id = id;
 
     }
 
-    public getName(){
+    public String getName(){
         return name;
     }
 
-    public getAge(){
+    public int getAge(){
         return age;
     }
 
-    public getId(){
-        return id
+    public int getId(){
+        return id;
     }
 
-    public setName(String name){
+    public void setName(String name){
         this.name = name;
     }
 
-    public setAge(int age){
+    public void setAge(int age){
         this.age = age;
     }
 
-    public setId(int id){
+    public void setId(int id){
         this.id = id;
     }
 
-    @override
+    @Override
     public String toString(){
-        final StringBuilder str = StringBuilder();
+        final StringBuilder str = new StringBuilder();
         str.append("Name : ").append(name).append("\n");
         str.append("Age : ").append(age).append("\n");
         str.append("ID : ").append(id).append("\n");
