@@ -1,6 +1,6 @@
 package equal;
 
-import java.time.Period;
+// import java.time.Period;
 
 public class test {
     
