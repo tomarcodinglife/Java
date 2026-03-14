@@ -15,13 +15,13 @@ public class test {
         System.out.println("Mean: " + mean);
         System.out.println("Median: " + median);
 
-        // // using non-static inner class
-        // ArrayOperations arrayOperations = new ArrayOperations();
+        // using non-static inner class
+        ArrayOperations arrayOperations = new ArrayOperations();
 
-        // ArrayOperations.StatisticsWithNonStatic statisticsWithNonStatic = arrayOperations.new StatisticsWithNonStatic();
-        // double meanNonStatic = statisticsWithNonStatic.mean(array);
+        ArrayOperations.StatisticsWithNonStatic statisticsWithNonStatic = arrayOperations.new StatisticsWithNonStatic();
+        double meanNonStatic = statisticsWithNonStatic.mean(array);
         
-
+        
 
     }
 

@@ -3,10 +3,11 @@ package thirdChalanges;
 public class ArrayOperations {
  
     private int[] array;
+    static int[] staticArray = {1, 2, 3, 4, 5, 6};
 
     /* it is static - it means that it belongs to the class rather than an instance of the class. This allows us to call the method without creating an instance of ArrayOperations, which is useful for utility methods that operate on arrays. */
 
-    /* Static inner class bnane ka fayda ye hai ki iske methods ko directly class ke naam se call kar sakte hain, bina kisi instance ke. Ye useful hota hai jab aapke methods sirf utility methods hain jo arrays par operate karte hain, aur unhe kisi instance variable ki zarurat nahi hoti. Static inner class ke methods ko call karne ke liye aapko ArrayOperations.StatisticsWithStatic.mean(array) jaisa syntax use karna hoga.
+    /* Static inner class bnane ka fayda ye hai ki iske methods ko directly class ke naam se call kar sakte hain, bina kisi instance ke. Ye useful hota hai jab aapke methods sirf utility methods hain jo instances variable par operate karte hain, aur unhe kisi instance variable ki zarurat nahi hoti. Static inner class ke methods ko call karne ke liye aapko ArrayOperations.StatisticsWithStatic.mean(array) jaisa syntax use karna hoga.
 
     Static Inner Class की खास बातें
     1. Outer class का object बनाना जरूरी नहीं
