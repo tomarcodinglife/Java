@@ -1,11 +1,17 @@
 package Animal;
 
-public class Animal {
+/* It is abstract class because we cannot create an object of it and it may contain abstract methods that must be implemented by subclasses.*/
+
+public abstract class Animal {
     private int age;
     private String name;
     private int noOfLegs;
 
 
+    // Abstract Methods
+    public abstract void runAnimal();
+
+    // Constructor
     public Animal(String name, int age, int noOfLegs) {
         this.name = name;
         this.age = age;
@@ -55,7 +61,7 @@ public class Animal {
     public void setNoOfLegs(int noOfLegs) {
         this.noOfLegs = noOfLegs;
     }
-    
+
 
 
 }

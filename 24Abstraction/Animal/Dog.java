@@ -12,5 +12,11 @@ public class Dog extends Animal {
         this.color = color;
     }
 
+    //Abstract method implementation
+    @Override
+    public void runAnimal() {
+        System.out.println("The gun dog runs swiftly.");
+    }
+
     
 }
