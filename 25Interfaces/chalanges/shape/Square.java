@@ -19,4 +19,5 @@ public class Square extends Shape {
     public double area() {
         return Math.pow(sideLength, 2);
     }
+    
 }
