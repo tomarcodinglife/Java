@@ -1,7 +1,7 @@
 # Java
 Java is a high-level, object-oriented, platform-independent programming language used to build software applications. It was developed by Sun Microsystems in 1995 and is now maintained by Oracle.
 
-## Why Java is Popular ""
+## Why Java is Popular
 
 ### Platform Independent
 Java follows the rule:
