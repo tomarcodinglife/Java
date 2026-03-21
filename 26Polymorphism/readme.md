@@ -275,7 +275,7 @@ Cat meows
 
 ---
 
-# 1️⃣2️⃣ Polymorphism Ka Real Use """
+# 1️⃣2️⃣ Polymorphism Ka Real Use
 
 Use hota hai:
 
