@@ -8,6 +8,7 @@ Is lesson me hum seekhenge:
 - Compile-time polymorphism
 - Run-time polymorphism
 - Upcasting ka role polymorphism me
+- Downcasting 
 
 ---
 
