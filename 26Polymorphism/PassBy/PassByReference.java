@@ -37,8 +37,7 @@ public class PassByReference {
         PassByReference passByReference = new PassByReference();
         passByReference.move(p);
         System.out.println("After moving: " + p); // Output: After moving: Point(3, 4)
-
-
+        
     }
 
 
