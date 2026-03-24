@@ -24,19 +24,23 @@ public class PassByReference {
     }
 
      // Method to move the point by a certain distance
-        public void move(point p){
-            p.x ++;
-            p.y ++;
-        };
+    public void move(point p){
+        p.x ++;
+        p.y ++;
+        System.out.println(p); // Output: Point(3, 4)
+    };
 
     public static void main(String[] args) {
+
+        // Create a point object
         point p = new point(2, 3);
 
         System.out.println("Before moving: " + p); // Output: Before moving: Point(2, 3)
+        System.out.printf("x = %d, y = %d, x + y = %d\n", p.x, p.y, p.x + p.y);
 
+        
         PassByReference passByReference = new PassByReference();
-        passByReference.move(p);
-        System.out.println("After moving: " + p); // Output: After moving: Point(3, 4)
+        passByReference.move(p); // Output: Point(3, 4)
         
     }
 
