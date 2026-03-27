@@ -1,8 +1,8 @@
-package TryCatch
+package TryCatch;
 
 import java.util.Scanner;
 
-public class calculator{
+public class Calculator{
 
     public static void main(String[] args) {
         
@@ -11,14 +11,25 @@ public class calculator{
 
         System.out.println("Please Enter your two Numbers : ");
 
+        System.out.print("Enter First Number : ");
         int first = input.nextInt();
+        System.out.print("Enter Second Number : ");
         int second = input.nextInt();
 
-        int result = first / second;
 
-        System.out.printf("Result is %d", result);
+        try {
+            int result = first / second;
+            System.out.printf("Result is %d", result);
+        } catch (ArithmeticException e) {
+            System.out.printf(" %S, Divide by Zero, Enter Valid Value", e.getMessage());
+        }
 
         
+
+
+
+
+
 
     }
 
