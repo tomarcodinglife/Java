@@ -11,7 +11,7 @@ Is lesson me hum cover karenge:
 
 ---
 
-# 1️⃣ Exception Kya Hota Hai?
+# 1️⃣ Exception Kya Hota Hai?.
 
 Exception ek **runtime error** hota hai jo program ke normal flow ko disturb karta hai.
 
