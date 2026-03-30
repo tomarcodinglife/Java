@@ -1,4 +1,7 @@
-package 28FileHandling;
+package FileWrite;
+
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class fileHandle01 {
     
@@ -8,7 +11,7 @@ public class fileHandle01 {
 
         System.out.println("Welcome to File Handling in Java! Let's explore how to read and write files.");
 
-        try(FileWriter writer = new FileWriter(fileName)) {
+        try(FileWriter writer = new FileWriter(fileName)) { // Using try-with-resources to ensure the FileWriter is closed automatically
             
             writer.write("My Name is Sujit Tomar.\n");
             writer.write("I am learning Java File Handling.\n");
