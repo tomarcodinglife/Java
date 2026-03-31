@@ -31,6 +31,225 @@ Less chances of crashes
 ## JDK vs JVM VS JRE
 JDK is a complete kit for Java developers. (JDK = JRE, Javac or Java Compiler, Development & Debugger) JVM is a virtual machine that runs Java programs. Using JVM Executes Java bytecode (.class files), Converts bytecode into machine code, Makes Java platform-independent, Manages memory and garbage collection and JRE provides the environment required to run Java applications. (JRE = JVM + Libraries)
 
+# ☕ Complete Java Course - Topics Index
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge)
+
+## 📚 Table of Contents
+
+- [#1 - Introduction to Java](#1---introduction-to-java)
+- [#2 - Java Basics](#2---java-basics)
+- [#3 - Data Types, Variables & Input](#3---data-types-variables--input)
+- [#4 - Operators, If-else, Number System](#4---operators-if-else-number-system)
+- [#5 - While Loop, Methods & Arrays](#5---while-loop-methods--arrays)
+- [#6 - Classes & Objects](#6---classes--objects)
+- [#7 - Control Statements, Math & String](#7---control-statements-math--string)
+- [#8 - Encapsulation & Inheritance](#8---encapsulation--inheritance)
+- [#9 - Abstraction & Polymorphism](#9---abstraction--polymorphism)
+- [#10 - Exception & File Handling](#10---exception--file-handling)
+- [#11 - Collections & Generics](#11---collections--generics)
+- [#12 - Multithreading & Executor Service](#12---multithreading--executor-service)
+- [#13 - Functional Programming](#13---functional-programming)
+
+---
+
+## #1 - Introduction to Java
+
+- [ ] 1.1 Why you must learn Java
+- [ ] 1.2 What is a Programming Language
+- [ ] 1.3 What is an Algorithm
+- [ ] 1.4 What is Syntax
+- [ ] 1.5 History of Java
+- [ ] 1.6 Magic of Byte Code
+- [ ] 1.7 How Java Changed the Internet
+- [ ] 1.8 Java Buzzwords
+- [ ] 1.9 What is Object Oriented Programming
+
+---
+
+## #2 - Java Basics
+
+- [ ] 2.1 Installing JDK
+- [ ] 2.2 First Class using Text Editor
+- [ ] 2.3 Compiling and Running
+- [ ] 2.4 Anatomy of a Class
+- [ ] 2.5 File Extensions
+- [ ] 2.6 JDK vs JVM vs JRE
+- [ ] 2.7 Showing Output
+- [ ] 2.8 Importance of the main method
+- [ ] 2.9 Installing IDE (Intellij Idea)
+- [ ] 2.10 Project Structure
+
+---
+
+## #3 - Data Types, Variables & Input
+
+- [ ] 3.1 Variables
+- [ ] 3.2 Data Types
+- [ ] 3.3 Naming Conventions
+- [ ] 3.4 Literals
+- [ ] 3.5 Keywords
+- [ ] 3.6 Escape Sequences
+- [ ] 3.7 User Input
+- [ ] 3.8 Type Conversion and Casting
+
+---
+
+## #4 - Operators, If-else, Number System
+
+- [ ] 4.1 Assignment Operator
+- [ ] 4.2 Arithmetic Operators
+- [ ] 4.3 Order of Operation
+- [ ] 4.4 Shorthand Operators
+- [ ] 4.5 Unary Operators
+- [ ] 4.6 If-else
+- [ ] 4.7 Relational Operators
+- [ ] 4.8 Logical Operators
+- [ ] 4.9 Operator Precedence
+- [ ] 4.10 Intro to Number System
+- [ ] 4.11 Intro to Bitwise Operators
+
+---
+
+## #5 - While Loop, Methods & Arrays
+
+- [ ] 5.1 Comments
+- [ ] 5.2 While Loop
+- [ ] 5.3 Methods
+- [ ] 5.4 Return Statement
+- [ ] 5.5 Arguments
+- [ ] 5.6 Arrays
+- [ ] 5.7 2D Arrays
+
+---
+
+## #6 - Classes & Objects
+
+- [ ] 6.1 Process vs Object Oriented
+- [ ] 6.2 Instance Variables and Methods
+- [ ] 6.3 Declaring and Using Objects
+- [ ] 6.4 Class vs Object
+- [ ] 6.5 This & Static Keyword
+- [ ] 6.6 Constructors & Code Blocks
+- [ ] 6.7 Stack vs Heap Memory
+- [ ] 6.8 Primitive vs Reference Types
+- [ ] 6.9 Variable Scopes
+- [ ] 6.10 Garbage Collection & Finalize
+
+---
+
+## #7 - Control Statements, Math & String
+
+- [ ] 7.1 Ternary Operator
+- [ ] 7.2 Switch
+- [ ] 7.3 Loops (Do-while, For, For each)
+- [ ] 7.4 Using break & continue
+- [ ] 7.5 Recursion
+- [ ] 7.6 Random Numbers & Math class
+- [ ] 7.7 Don't Learn Syntax
+- [ ] 7.8 toString Method
+- [ ] 7.9 String class
+- [ ] 7.10 StringBuffer vs StringBuilder
+- [ ] 7.11 Final keyword
+
+---
+
+## #8 - Encapsulation & Inheritance
+
+- [ ] 8.1 Intro to OOPs Principle
+- [ ] 8.2 What is Encapsulation
+- [ ] 8.3 Import & Packages
+- [ ] 8.4 Access Modifiers
+- [ ] 8.5 Getter and Setter
+- [ ] 8.6 What is Inheritance
+- [ ] 8.7 Types of Inheritance
+- [ ] 8.8 Object class
+- [ ] 8.9 Equals and Hash Code
+- [ ] 8.10 Nested and Inner Classes
+
+---
+
+## #9 - Abstraction & Polymorphism
+
+- [ ] 9.1 What is Abstraction
+- [ ] 9.2 Abstract Keyword
+- [ ] 9.3 Interfaces
+- [ ] 9.4 What is Polymorphism
+- [ ] 9.5 References and Objects
+- [ ] 9.6 Method / Constructor Overloading
+- [ ] 9.7 Super Keyword
+- [ ] 9.8 Method / Constructor Overriding
+- [ ] 9.9 Final keyword revisited
+- [ ] 9.10 Pass by Value vs Pass by Reference
+
+---
+
+## #10 - Exception & File Handling
+
+- [ ] 10.1 What is an Exception
+- [ ] 10.2 Try-Catch
+- [ ] 10.3 Types of Exception
+- [ ] 10.4 Throw and Throws
+- [ ] 10.5 Finally Block
+- [ ] 10.6 Custom Exceptions
+- [ ] 10.7 FileWriter class
+- [ ] 10.8 FileReader class
+
+---
+
+## #11 - Collections & Generics
+
+- [ ] 11.1 Variable Arguments
+- [ ] 11.2 Wrapper Classes & Autoboxing
+- [ ] 11.3 Collections Library
+- [ ] 11.4 List Interface
+- [ ] 11.5 Queue Interface
+- [ ] 11.6 Set Interface
+- [ ] 11.7 Collections Class
+- [ ] 11.8 Map Interface
+- [ ] 11.9 Enums
+- [ ] 11.10 Generics & Diamond Operators
+
+---
+
+## #12 - Multithreading & Executor Service
+
+- [ ] 12.1 Intro to Multi-threading
+- [ ] 12.2 Creating a Thread
+- [ ] 12.3 States of a Thread
+- [ ] 12.4 Thread Priority
+- [ ] 12.5 Join Method
+- [ ] 12.6 Synchronize keyword
+- [ ] 12.7 Thread Communication
+- [ ] 12.8 Intro to Executor Service
+- [ ] 12.9 Multiple Threads with Executor
+- [ ] 12.10 Returning Futures
+
+---
+
+## #13 - Functional Programming
+
+- [ ] 13.1 What is Functional Programming
+- [ ] 13.2 Lambda Expression
+- [ ] 13.3 What is a Stream
+- [ ] 13.4 Filtering & Reducing
+- [ ] 13.5 Functional Interfaces
+- [ ] 13.6 Method References
+- [ ] 13.7 Functional vs Structural Programming
+- [ ] 13.8 Optional Class
+- [ ] 13.9 Intermediate vs Terminal Operations
+- [ ] 13.10 Max, Min, Collect to List
+- [ ] 13.11 Sort, Distinct, Map
+
+---
+
+> 📝 **Note:** `- [ ]` checkbox hai — GitHub pe tick kar sakte ho jab topic complete ho jaye!
+
+
+
+# Step By Step
+
 ## Variables 
 
 ## Java Literals
