@@ -11,6 +11,7 @@ public class VarArgs {
         return total;
     }
 
+    
     // Normally, you would have to define multiple methods to handle different numbers of arguments, but with varargs, you can handle them all with a single method.
     public static int sum(int a, int b) {
         return a + b;
@@ -54,11 +55,8 @@ public class VarArgs {
         System.out.println(sumArray(numbers)); // Output: 15
 
         // Using the sum method with Varargs
-
-        System.out.println(sum(1, 2, 3, 4, 5)); // Output: 15
-        System.out.println(sum(10, 20, 30)); // Output: 60
-        System.out.println(sum(7)); // Output: 7
-        System.out.println(sum()); // Output: 0
+        System.out.println(sum(numbers));                       // Output: 15
+        System.out.println(sum());                              // Output: 0
 
     }
 
