@@ -21,6 +21,20 @@ public class ListExample {
     // 11. List grow automatically as you add elements to it. You do not need to worry about the size of the list, as it will resize itself as needed to accommodate new elements.
     // 12. List Collection is preferred when you need to maintain the order of elements and allow duplicates in your collection. It is also useful when you need to access elements by their index or when you need to perform operations that require random access to elements.
 
+    // List Rule in Hindi:
+    // 1. List duplicate elements ko allow karta hai.
+    // 2. List elements ke order ko maintain karta hai.
+    // 3. List null elements ko allow karta hai (implementation ke hisab se).
+    // 4. List elements ko manipulate karne ke liye methods provide karta hai, jaise add(), remove(), get(), set(), etc.
+    // 5. List ek interface hai, isliye aap ise directly instantiate nahi kar sakte. Aapko List interface ko implement karne wale class ka use karna hoga, jaise ArrayList ya LinkedList.
+    // 6. List kisi bhi type ka ho sakta hai, including custom objects, jab tak ki wo same type ke ho (generics).
+    // 7. List index ke through access kiya ja sakta hai, iska matlab hai ki aap elements ko unke position ke basis par retrieve, update, ya remove kar sakte hain.
+    // 8. List synchronized nahi hai, iska matlab hai ki ye thread-safe nahi hai agar aapko thread-safe version of List ki zarurat hai, to aap Collections.synchronizedList() ka use kar sakte hain ya CopyOnWriteArrayList jaise concurrent collection ka use kar sakte hain.
+    // 9. List insertion order maintain karta hai, iska matlab hai ki elements us order me store hote hain jisme unhe list me add kiya gaya tha. Ye Set jaise other collections se alag hai, jo insertion order maintain nahi karte.
+    // 10. List elements ko fast random access provide karta hai, iska matlab hai ki aap elements ko unke index ke basis par constant time (O(1)) me retrieve kar sakte hain. Ye isliye hota hai kyunki List array-based implementation ka use karta hai, jo elements tak efficient access allow karta hai.
+    // 11. List automatically grow karta hai jab aap elements add karte hain, iska matlab hai ki aapko list ke size ke baare me chinta karne ki zarurat nahi hai, kyunki ye apne aap resize ho jayega jab naye elements ko accommodate karne ki zarurat hogi.
+    // 12. List collection tab prefer ki jati hai jab aapko apne collection me elements ke order ko maintain karna ho aur duplicates allow karna ho. Ye tab bhi useful hai jab aapko elements ko unke index ke basis par access karna ho ya jab aapko operations perform karne ho jo elements ke random access ki zarurat hoti hai.
+
 
     // Example of using List in Java:
     public static void main(String[] args) {
