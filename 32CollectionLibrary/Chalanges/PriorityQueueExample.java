@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class PriorityQueue {
+public class PriorityQueueExample {
 
 
     public static class Student {
@@ -18,7 +18,7 @@ public class PriorityQueue {
         }
 
         public void setName(String name) {
-            this.name = name;
+            // this.name = name;
         }
 
         public char getGrade() {
@@ -31,7 +31,7 @@ public class PriorityQueue {
 
         @Override
         public String toString() {
-            return "Student {name='" + name + "', grade=" + grade + "}";
+            // return "Student {name='" + name + "', grade=" + grade + "}";
         }
 
 
@@ -52,12 +52,19 @@ public class PriorityQueue {
 
         studentQueue.offer(new Student("Alice", 'A'));
         studentQueue.offer(new Student("Bob", 'B'));
+        studentQueue.offer(new Student("Sujit", 'A'));
         studentQueue.offer(new Student("Charlie", 'C'));
+        studentQueue.offer(new Student("Ravi", 'B'));
 
 
 
         // Polling students from the priority queue will return them in order of their grades (A, B, C)
         System.out.println(studentQueue.poll()); // Output: Student {name='Alice', grade=A
+
+        // through loop we can poll all the students from the priority queue
+        while (!studentQueue.isEmpty()) {
+            System.out.println(studentQueue.poll()); // Output: Student {name='Bob', grade=B} and Student {name='Charlie', grade=C}
+        }
        
 
 
