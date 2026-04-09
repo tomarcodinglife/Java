@@ -23,7 +23,8 @@ public class Wrapper {
         System.out.println("Integer value using intValue(): " + num1.intValue()); // Output: Integer value using intValue(): 10
         System.out.println("Double value using doubleValue(): " + num2.doubleValue()); //
 
-        // Wraper Class isliye use hota hai kyunki primitive data types ke paas methods nahi hote, jabki wrapper classes ke paas methods hote hain jo unke corresponding primitive data types ko manipulate karne mein madad karte hain. For example, Integer class has methods like intValue(), parseInt(), etc., which can be used to convert a String to an int or to get the int value from an Integer object.
+        // Wraper Class isliye use hota hai kyunki primitive data types ke paas methods nahi hote, jabki wrapper classes ke paas methods hote hain jo unke corresponding primitive data types ko manipulate karne mein madad karte hain. For example, Integer class has methods like intValue(), parseInt(), etc., which can be used to convert a String to an int or to get the int value from an Integer object.\
+        // Wraper Class ke sabhi object final hote hain, iska matlab hai ki unki value change nahi ho sakti. For example, once you create an Integer object with a value of 10, you cannot change that value. You would need to create a new Integer object if you want to represent a different value. 
 
     
 
