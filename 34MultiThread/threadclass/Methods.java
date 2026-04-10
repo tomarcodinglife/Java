@@ -1,4 +1,4 @@
-package multithread;
+package threadclass;
 
 public class Methods extends Thread {
     int startnum, endnum;

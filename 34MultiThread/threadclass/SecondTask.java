@@ -1,5 +1,5 @@
-package multithread;
-import multithread.Methods;
+package threadclass;
+import threadclass.Methods;
 
 public class SecondTask extends Methods {
 
