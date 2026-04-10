@@ -1,6 +1,8 @@
 package runnable;
 
 public class RunnableTest implements Runnable {
+    private final char targetChar;
+
     /* 
     Runnable aur thread me kya farak hai?
     Runnable ek interface hai jisme run() method hota hai, jabki Thread ek class hai jo Runnable interface ko implement karti hai. Runnable ko use karne se hum apne thread ke logic ko alag rakh sakte hain, jabki Thread class me hum directly thread ke logic ko define karte hain. 
@@ -14,12 +16,11 @@ public class RunnableTest implements Runnable {
     @Override
     public void run() {
         for (int i = 1; i < 100; i++) {
-            System.out.printf("%d*" + i + " ");
+            System.out.printf("%d%c", i, targetChar);  
         }
-        System.out.printf("\n %s * Thread is task completed", Thread.currentThread().getName());
+        System.out.printf("\n %s %c Thread is task completed", Thread.currentThread().getName(), targetChar);
     }
-
-    private char targetChar;
+ 
     public RunnableTest(char targetChar) {
         this.targetChar = targetChar;
     }
