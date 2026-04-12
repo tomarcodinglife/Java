@@ -1,4 +1,4 @@
-package threadCommunication;
+package threadControlAndScheduling;
 
 
 public class Yield {
