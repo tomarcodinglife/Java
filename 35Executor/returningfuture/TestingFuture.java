@@ -1,10 +1,13 @@
 package returningfuture;
-import java.util.service.concurrent.Callable;
+
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 
 public class TestingFuture {
@@ -32,8 +35,14 @@ public class TestingFuture {
         Future<String> future3 = service.submit(task3);
         Future<String> future4 = service.submit(task4);
 
-        future1.isDone();
-        future1.get();
+        /*
+        Future kya hai ?
+        Future ek interface hai jo java.util.concurrent package me available hai. Future ka use asynchronous programming me hota hai, jisme hum tasks ko background me execute karte hain aur main thread ko block nahi karte hain. Future ke through hum task ke status ko check kar sakte hain, jaise ki isDone() method se pata chal sakta hai ki task complete hua hai ya nahi. Future ke through hum task ke result ko bhi retrieve kar sakte hain jab task complete ho jata hai. Future ka use karke hum efficient aur responsive applications bana sakte hain.
+        
+        */
+
+        // future1.isDone();
+        // future1.get();
 
         // Print
 
@@ -42,7 +51,7 @@ public class TestingFuture {
         System.out.printf("Full Name is %s\n", future3.get());
         System.out.printf("Full Name is %s\n", future4.get());
 
-        Service.shutdown();
+        service.shutdown();
 
     }
 

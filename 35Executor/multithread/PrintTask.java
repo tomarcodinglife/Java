@@ -17,7 +17,6 @@ public class PrintTask implements Runnable {
 
             System.out.printf("%d%c", i, targetChar);  
         }
-
         System.out.printf("\n %s %c Thread is task completed", Thread.currentThread().getName(), targetChar);
 
     }
