@@ -7,6 +7,7 @@ public class Test  {
 
     public static void main(String[] args) {
 
+        // 1st without try-catch block
         ExecutorService service = Executors.newSingleThreadExecutor();
         PrintTask printTask1 = new PrintTask('*');
         PrintTask printTask2 = new PrintTask('$');
@@ -17,6 +18,19 @@ public class Test  {
         service.submit(printTask3);
 
         service.shutdown();
+
+        // 2nd with try-catch block
+        try(ExecutorService myservice = Executors.newSingleThreadExecutor()) {
+            PrintTask mypint1 = new PrintTask('*');
+            PrintTask mypint2 = new PrintTask('$');
+            PrintTask mypint3 = new PrintTask('#');
+
+            myservice.submit(mypint1);
+            myservice.submit(mypint2);
+            myservice.submit(mypint3);
+
+        }
+            
 
         
     }

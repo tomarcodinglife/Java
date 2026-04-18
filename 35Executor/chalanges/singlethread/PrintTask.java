@@ -13,7 +13,7 @@ public class PrintTask implements Runnable {
     public void run() {
         
         for (int i = 1; i <= 10; i++) {
-
+            
            try {
                 Thread.sleep(100); // 100 milliseconds ke liye thread ko sleep karna, jisse ki output thoda slow ho jaye aur hum easily dekh sake ki kaunse character print ho raha hai.
             } catch (InterruptedException e) { // InterruptedException handle karna, jo ki thread sleep ke dauran interrupt hone par throw hota hai.
