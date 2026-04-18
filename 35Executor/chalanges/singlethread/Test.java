@@ -21,9 +21,9 @@ public class Test  {
 
         // 2nd with try-catch block
         try(ExecutorService myservice = Executors.newSingleThreadExecutor()) {
-            PrintTask mypint1 = new PrintTask('*');
-            PrintTask mypint2 = new PrintTask('$');
-            PrintTask mypint3 = new PrintTask('#');
+            PrintTask mypint1 = new PrintTask('S');
+            PrintTask mypint2 = new PrintTask('U');
+            PrintTask mypint3 = new PrintTask('J');
 
             myservice.submit(mypint1);
             myservice.submit(mypint2);
