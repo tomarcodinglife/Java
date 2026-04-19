@@ -22,12 +22,15 @@ public class LambdaExpression {
         LambdaExpression mynum = new LambdaExpression();
 
         // Without lambda expression
+        printMessage("This is Without lambda expression Methods Result");
         int sum = mynum.add(5, 10);
-        printMessage("Sum: " + sum);
 
 
         // With lambda expression
-        
+        // No need to create a separate method for addition, we can directly use a lambda expression.
+
+        // Two parameters and a return value
+        // Operation addition = (a, b) -> a + b;
 
     }
 
