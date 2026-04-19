@@ -5,13 +5,13 @@
     import java.util.concurrent.ExecutorService;
     import java.util.concurrent.Executors;
     import java.util.concurrent.Future;
-
-    import Chalanges.Calculator.calculator;
+    import java.util.ArrayList;
+    import java.util.concurrent.TimeUnit;
 
     public class Test {
 
         public static void main(String[] args) {
-            try(ExecutorService service = Executors.newSingleThreadExecutor();){
+            try(ExecutorService service = Executors.newFixedThreadPool(3);){
 
                 List<Future<Integer>> futures = new ArrayList<>();
 
@@ -23,10 +23,16 @@
                 for(Future<Integer> future : futures){
                     System.out.println(future.get());
                 }
-            }catch(ExecutionException e){
-                throw new RuntimeException();
-            }catch(InterruptedException e){
-                throw new RuntimeException();
+
+                // service.shutdown();
+
+                if (service.awaitTermination(10, TimeUnit.SECONDS)) {
+                    System.out.println("All tasks completed successfully.");
+                    service.shutdown();
+                }
+
+            }catch(InterruptedException | ExecutionException e){
+                throw new RuntimeException(e);
             }
 
         }
