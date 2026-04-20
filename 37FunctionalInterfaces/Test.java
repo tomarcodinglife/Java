@@ -1,14 +1,20 @@
 
-import java.util.function.Predicate;
-import java.util.function.Consumer;
-import java.util.function.BinaryOperator;
+import java.util.function.*;
 import java.lang.Runnable;
-import java.lang.Comparable;
-import java.util.function.Supplier;
-import java.util.function.UnaryOperator;
+import java.awt.event.ActionListener;
+import java.util.Comparator;
 
 
 public class Test {
+
+    //Functional Interface
+        // A functional interface is an interface that has only one abstract method. It can have multiple
+        // default and static methods.
+        // Example of a functional interface
+    @FunctionalInterface
+        interface MyFunctionalInterface {
+            void myMethod();
+    }
     
 
     public static void main(String[] args) {
@@ -29,27 +35,19 @@ public class Test {
         BinaryOperator<Integer> add = (a, b) -> a + b;
         System.out.println("Sum of 5 and 10: " + add.apply(5, 10));
 
-        //Functional Interface
-        // A functional interface is an interface that has only one abstract method. It can have multiple
-        // default and static methods.
-        // Example of a functional interface
-        @FunctionalInterface
-        interface MyFunctionalInterface {
-            void myMethod();
-        }
-
         //Runnable is a functional interface that has only one abstract method run()
         Runnable myRunnable = () -> System.out.println("Running in a thread");
         Thread thread = new Thread(myRunnable);
         thread.start();
 
         //Comparable is a functional interface that has only one abstract method compareTo()
-        Comparable<Integer> myComparable = (a, b) -> a.compareTo(b);
-        System.out.println("Comparing 5 and 10: " + myComparable.compareTo(5, 10));
+        Comparator<Integer> myComparator = (a, b) -> a.compareTo(b);
+        System.out.println("Comparing 5 and 10: " +  myComparator.compare(5, 10));
 
         // Action Listener is a functional interface that has only one abstract method actionPerformed()
         // Example of ActionListener
-        // ActionListener myActionListener = e -> System.out.println("Button clicked");
+        ActionListener myActionListener = e -> System.out.println("Button clicked");
+        
 
         
         // Supplier is a functional interface that has only one abstract method get()
@@ -59,13 +57,13 @@ public class Test {
 
         // BiConsumer is a functional interface that takes two arguments and returns no result.
         // Example of BiConsumer
-        // BiConsumer<String, Integer> myBiConsumer = (name, age) -> System.out.println(name + " is " + age + " years old");
-        // myBiConsumer.accept("Alice", 30); 
+        BiConsumer<String, Integer> myBiConsumer = (name, age) -> System.out.println(name + " is " + age + " years old");
+        myBiConsumer.accept("Alice", 30); 
         
         // BiFunction is a functional interface that takes two arguments and returns a result.
         // Example of BiFunction
-        // BiFunction<Integer, Integer, Integer> myBiFunction = (a, b) -> a + b;
-        // System.out.println("BiFunction result: " + myBiFunction.apply(5, 10));
+        BiFunction<Integer, Integer, Integer> myBiFunction = (a, b) -> a + b;
+        System.out.println("BiFunction result: " + myBiFunction.apply(5, 10));
 
         //UnaryOperator is a functional interface that takes one argument and returns a result of the same type.
         // Example of UnaryOperator
