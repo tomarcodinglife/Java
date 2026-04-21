@@ -1,6 +1,23 @@
 package chalanges.lambdaexpression;
+import java.util.function.*;
 
 public class Multiplication {
+
+    // Custom functional interfaces for three, four and five parameters
+    @FunctionalInterface
+    interface TriFunction<A, B, C, R> {
+        R apply(A a, B b, C c);
+    }
+
+    @FunctionalInterface
+    interface QuadFunction<A, B, C, D, R> {
+        R apply(A a, B b, C c, D d);
+    }
+
+    @FunctionalInterface
+    interface PentaFunction<A, B, C, D, E, R> {
+        R apply(A a, B b, C c, D d, E e);
+    }
 
     public static void main (String[] args) {
         // Multiplication of Two numbers using Lambda Expression
