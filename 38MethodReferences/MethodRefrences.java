@@ -21,7 +21,7 @@ public class MethodRefrences {
         System.out.println("\n Using method reference to print odd numbers:");
         numbers.stream()
                 .filter(num -> num % 2 != 0)
-                .forEach(System.out::println);
+                .forEach(System.out::println); // double colon (::)
 
         
 
