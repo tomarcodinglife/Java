@@ -16,7 +16,7 @@ Is lesson me hum seekhenge:
 
 ---
 
-# 1️⃣ Programming Paradigm Kya Hota Hai?
+# 1️⃣ Programming Paradigm Kya Hota Hai?.
 
 Programming Paradigm ka matlab:
 
